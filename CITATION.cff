@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or results, please cite the paper below."
+title: "BASK: Bridge Attention with Structural and Knowledge information"
+authors:
+  - family-names: Ethari
+    given-names: Hrishikesh
+    affiliation: DGIST
+    orcid: "https://orcid.org/0009-0002-3836-7003"
+  - family-names: Kim
+    given-names: Kisub
+    affiliation: DGIST
+    orcid: "https://orcid.org/0000-0002-4462-6916"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Structure-Aware Vulnerability Detection Without the Cost: A Modular Bridge for Any Code Model"
+  authors:
+    - family-names: Ethari
+      given-names: Hrishikesh
+    - family-names: Kim
+      given-names: Kisub
+  collection-title: "Proceedings of the 33rd Asia-Pacific Software Engineering Conference (APSEC 2026)"
+  year: 2026
