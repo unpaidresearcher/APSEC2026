@@ -115,21 +115,6 @@ python primevul_phase1_auc.py \
 python figures/make_figures.py   # writes PDFs to figures/figs/
 ```
 
-## Citation
-
-```bibtex
-@inproceedings{ethari2026bask,
-  title     = {Structure-Aware Vulnerability Detection Without the Cost: A Modular Bridge for Any Code Model},
-  author    = {Ethari, Hrishikesh and Kim, Kisub},
-  booktitle = {Proceedings of the 33rd Asia-Pacific Software Engineering Conference (APSEC)},
-  year      = {2026}
-}
-```
-
-## Contact
-
-Hrishikesh Ethari (hrishikesh.ethari@dgist.ac.kr) and Kisub Kim (corresponding author), DGIST.
-
 ## License
 
 MIT, see `LICENSE`. PrimeVul and the backbone models are not redistributed and remain under
