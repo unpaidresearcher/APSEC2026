@@ -1,0 +1,1277 @@
+{
+  "fixes": [
+    {
+      "kind": "fixes",
+      "backbone": "starcoder2_lora",
+      "project": "libjpeg",
+      "cwe": [
+        "CWE-703"
+      ],
+      "cve": "",
+      "commit": "4746b577931e926a49e50de9720a4946de3069a7",
+      "loc": 170,
+      "changed_lines": 189,
+      "scores": {
+        "base_vuln": 0.0086,
+        "base_patched": 0.002,
+        "thr_base": 0.55,
+        "bask_vuln": 0.2474,
+        "bask_patched": 0.1293,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "correct",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::ParseMCU",
+        "Variable::ParseMCU::lines",
+        "Variable::ParseMCU::isrun",
+        "Variable::ParseMCU::negative",
+        "Function::isRunMode",
+        "Function::DecodeRun",
+        "Function::BeginReadMCU",
+        "Function::QuantizedGradient",
+        "Function::error",
+        "Function::InverseErrorMapping",
+        "Function::CurrentLine",
+        "Function::GolombParameter"
+      ],
+      "kg_only_in_vuln": [
+        "Variable::ParseMCU::isrun",
+        "Function::ErrorMapping",
+        "Function::GolombCode",
+        "Function::MCUHeightOf"
+      ],
+      "kg_only_in_patched": [
+        "Variable::ParseMCU::rtype",
+        "Variable::ParseMCU::linenumber",
+        "Variable::ParseMCU::xpos",
+        "GLOBAL::ExternalAPI::printf"
+      ],
+      "features_changed": {
+        "loc": [
+          170.0,
+          151.0
+        ],
+        "cyclomatic": [
+          23.0,
+          14.0
+        ],
+        "max_depth": [
+          7.0,
+          6.0
+        ],
+        "n_returns": [
+          1.0,
+          2.0
+        ],
+        "n_arrays": [
+          62.0,
+          8.0
+        ],
+        "n_format": [
+          0.0,
+          4.0
+        ],
+        "halstead_n2": [
+          231.0,
+          214.0
+        ],
+        "halstead_N1": [
+          644.0,
+          488.0
+        ],
+        "halstead_N2": [
+          738.0,
+          612.0
+        ],
+        "halstead_vol": [
+          11063.77,
+          8697.58
+        ],
+        "fan_out": [
+          25.0,
+          27.0
+        ],
+        "has_recursion": [
+          0.0,
+          1.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -1,3 +1,3 @@",
+        "-bool SampleInterleavedLSScan::ParseMCU(void)",
+        "-{",
+        "+bool SingleComponentLSScan::ParseMCU(void)",
+        "+{ ",
+        " #if ACCUSOFT_CODE",
+        "@@ -5,5 +5,4 @@",
+        "   UBYTE preshift        = m_ucLowBit + FractionalColorBitsOf();",
+        "-  struct Line *line[4];",
+        "-  UBYTE cx;",
+        "-",
+        "+  struct Line *line     = CurrentLine(0);",
+        "+  ",
+        "   //",
+        "@@ -14,2 +13,5 @@",
+        "   }",
+        "+",
+        "+  assert(m_ucCount == 1);",
+        "+",
+        "   //",
+        "@@ -21,10 +23,5 @@",
+        "     m_ulRemaining[0] -= lines;",
+        "-  assert(lines > 0);",
+        "-  assert(m_ucCount < 4);",
+        " ",
+        "-  //",
+        "-  // Fill the line pointers.",
+        "-  for(cx = 0;cx < m_ucCount;cx++) {",
+        "-    line[cx] = CurrentLine(cx);",
+        "-  }",
+        "+  if (lines == 0)",
+        "+    return false;",
+        " ",
+        "@@ -33,31 +30,22 @@",
+        "     LONG length = m_ulWidth[0];",
+        "-    LONG *lp[4];",
+        "+    LONG *lp    = line->m_pData;",
+        " ",
+        "-    // Get the line pointers and initialize the internal backup lines.",
+        "-    for(cx = 0;cx < m_ucCount;cx++) {",
+        "-      lp[cx] = line[cx]->m_pData;",
+        "-      StartLine(cx);",
+        "-    }",
+        "-",
+        "-    if (BeginReadMCU(m_Stream.ByteStreamOf())) { ",
+        "-      // No error handling strategy. No RST in scans. Bummer!",
+        "+#ifdef DEBUG_LS",
+        "+    int xpos    = 0;",
+        "+    static int linenumber = 0;",
+        "+    printf(\"\\n%4d : \",++linenumber);",
+        "+#endif",
+        "+     ",
+        "+    StartLine(0);",
+        "+    if (BeginReadMCU(m_Stream.ByteStreamOf())) { // No error handling strategy. No RST in scans. Bummer!",
+        "       do {",
+        "-        LONG a[4],b[4],c[4],d[4]; // neighbouring values.",
+        "-        LONG d1[4],d2[4],d3[4];   // local gradients.",
+        "-        bool isrun = true;",
+        "+        LONG a,b,c,d;   // neighbouring values.",
+        "+        LONG d1,d2,d3;  // local gradients.",
+        "       ",
+        "-        for(cx = 0;cx < m_ucCount;cx++) {",
+        "-          GetContext(cx,a[cx],b[cx],c[cx],d[cx]);",
+        "-",
+        "-          d1[cx]  = d[cx] - b[cx];    // compute local gradients",
+        "-          d2[cx]  = b[cx] - c[cx];",
+        "-          d3[cx]  = c[cx] - a[cx];",
+        "-",
+        "-          //",
+        "-          // Run mode only if the run condition is met for all components",
+        "-          if (isrun && !isRunMode(d1[cx],d2[cx],d3[cx]))",
+        "-            isrun = false;",
+        "-        }",
+        "+        GetContext(0,a,b,c,d);",
+        "+        d1  = d - b;    // compute local gradients",
+        "+        d2  = b - c;",
+        "+        d3  = c - a;",
+        "         ",
+        "-        if (isrun) {",
+        "+        if (isRunMode(d1,d2,d3)) {",
+        "           LONG run = DecodeRun(length,m_lRunIndex[0]);",
+        "@@ -67,8 +55,8 @@",
+        "             // Update so that the next process gets the correct value.",
+        "-            // There is one sample per component.",
+        "-            for(cx = 0;cx < m_ucCount;cx++) {",
+        "-              UpdateContext(cx,a[cx]);",
+        "-              // And insert the value into the target line as well.",
+        "-              *lp[cx]++ = a[cx] << preshift;",
+        "-            }",
+        "+            UpdateContext(0,a);",
+        "+            // And insert the value into the target line as well.",
+        "+            *lp++ = a << preshift;",
+        "+#ifdef DEBUG_LS",
+        "+            printf(\"%4d:<%2x> \",xpos++,a);",
+        "+#endif",
+        "             run--,length--;",
+        "@@ -78,5 +66,6 @@",
+        "           // More data on the line? I.e. the run did not cover the full m_lJ samples?",
+        "-          // Now decode the run interruption sample. The rtype is here always zero.",
+        "+          // Now decode the run interruption sample.",
+        "           if (length) {",
+        "             bool negative; // the sign variable",
+        "+            bool rtype;    // run interruption type",
+        "             LONG errval;   // the prediction error",
+        "@@ -85,26 +74,23 @@",
+        "             UBYTE k;       // golomb parameter",
+        "-            //",
+        "-            // Decode the interrupting pixels.",
+        "-            for(cx = 0;cx < m_ucCount;cx++) {",
+        "-              // Get the neighbourhood.",
+        "-              GetContext(cx,a[cx],b[cx],c[cx],d[cx]);",
+        "-              // The prediction mode is always false, but the sign information",
+        "-              // is required.",
+        "-              negative = a[cx] > b[cx];",
+        "-              // Get the golomb parameter for run interruption coding.",
+        "-              k       = GolombParameter(false);",
+        "-              // Golomb-decode the error symbol. It is always using the common",
+        "-              // run index.",
+        "-              merr    = GolombDecode(k,m_lLimit - m_lJ[m_lRunIndex[0]] - 1);",
+        "-              // Inverse the error mapping procedure.",
+        "-              errval  = InverseErrorMapping(merr,ErrorMappingOffset(false,merr != 0,k));",
+        "-              // Compute the reconstructed value.",
+        "-              rx      = Reconstruct(negative,b[cx],errval);",
+        "-              // Update so that the next process gets the correct value.",
+        "-              UpdateContext(cx,rx);",
+        "-              // Fill in the value into the line",
+        "-              *lp[cx]++ = rx << preshift;",
+        "-              // Update the variables of the run mode.",
+        "-              UpdateState(false,errval);",
+        "-            }",
+        "+            // Get the neighbourhood.",
+        "+            GetContext(0,a,b,c,d);",
+        "+            // Get the prediction mode.",
+        "+            rtype  = InterruptedPredictionMode(negative,a,b);",
+        "+            // Get the golomb parameter for run interruption coding.",
+        "+            k      = GolombParameter(rtype);",
+        "+            // Golomb-decode the error symbol.",
+        "+            merr   = GolombDecode(k,m_lLimit - m_lJ[m_lRunIndex[0]] - 1);",
+        "+            // Inverse the error mapping procedure.",
+        "+            errval = InverseErrorMapping(merr + rtype,ErrorMappingOffset(rtype,rtype || merr,k));",
+        "+            // Compute the reconstructed value.",
+        "+            rx     = Reconstruct(negative,rtype?a:b,errval);",
+        "+            // Update so that the next process gets the correct value.",
+        "+            UpdateContext(0,rx);",
+        "+            // Fill in the value into the line",
+        "+            *lp    = rx << preshift;",
+        "+#ifdef DEBUG_LS",
+        "+            printf(\"%4d:<%2x> \",xpos++,*lp);",
+        "+#endif",
+        "+            // Update the variables of the run mode.",
+        "+            UpdateState(rtype,errval);",
+        "             // Update the run index now. This is not part of",
+        "@@ -123,40 +109,35 @@",
+        "           UBYTE k;        // the Golomb parameter.",
+        "-          //",
+        "-          for(cx = 0;cx < m_ucCount;cx++) {",
+        "-            // Quantize the gradients.",
+        "-            d1[cx]  = QuantizedGradient(d1[cx]);",
+        "-            d2[cx]  = QuantizedGradient(d2[cx]);",
+        "-            d3[cx]  = QuantizedGradient(d3[cx]);",
+        "-            // Compute the context.",
+        "-            ctxt    = Context(negative,d1[cx],d2[cx],d3[cx]); ",
+        "-            // Compute the predicted value.",
+        "-            px      = Predict(a[cx],b[cx],c[cx]);",
+        "-            // Correct the prediction.",
+        "-            px      = CorrectPrediction(ctxt,negative,px);",
+        "-            // Compute the golomb parameter k from the context.",
+        "-            k       = GolombParameter(ctxt);",
+        "-            // Decode the error symbol.",
+        "-            merr    = GolombDecode(k,m_lLimit);",
+        "-            // Inverse the error symbol into an error value.",
+        "-            errval  = InverseErrorMapping(merr,ErrorMappingOffset(ctxt,k));",
+        "-            // Update the variables.",
+        "-            UpdateState(ctxt,errval);",
+        "-            // Compute the reconstructed value.",
+        "-            rx      = Reconstruct(negative,px,errval);",
+        "-            // Update so that the next process gets the correct value.",
+        "-            UpdateContext(cx,rx);",
+        "-            // And insert the value into the target line as well.",
+        "-            *lp[cx]++ = rx << preshift;",
+        "-          }",
+        "+          // Quantize the gradients.",
+        "+          d1     = QuantizedGradient(d1);",
+        "+          d2     = QuantizedGradient(d2);",
+        "+          d3     = QuantizedGradient(d3);",
+        "+          // Compute the context.",
+        "+          ctxt   = Context(negative,d1,d2,d3); ",
+        "+          // Compute the predicted value.",
+        "+          px     = Predict(a,b,c);",
+        "+          // Correct the prediction.",
+        "+          px     = CorrectPrediction(ctxt,negative,px);",
+        "+          // Compute the golomb parameter k from the context.",
+        "+          k      = GolombParameter(ctxt);",
+        "+          // Decode the error symbol.",
+        "+          merr   = GolombDecode(k,m_lLimit);",
+        "+          // Inverse the error symbol into an error value.",
+        "+          errval = InverseErrorMapping(merr,ErrorMappingOffset(ctxt,k));",
+        "+          // Update the variables.",
+        "+          UpdateState(ctxt,errval);",
+        "+          // Compute the reconstructed value.",
+        "+          rx     = Reconstruct(negative,px,errval);",
+        "+          // Update so that the next process gets the correct value.",
+        "+          UpdateContext(0,rx);",
+        "+          // And insert the value into the target line as well.",
+        "+          *lp    = rx << preshift;",
+        "+#ifdef DEBUG_LS",
+        "+          printf(\"%4d:<%2x> \",xpos++,*lp);",
+        "+#endif",
+        "         }",
+        "-      } while(--length);",
+        "+      } while(++lp,--length);",
+        "     } // No error handling here.",
+        "-    //",
+        "-    // Advance the line pointers.",
+        "-    for(cx = 0;cx < m_ucCount;cx++) {",
+        "-      EndLine(cx);",
+        "-      line[cx] = line[cx]->m_pNext;",
+        "-    }",
+        "-    //",
+        "-  } while(--lines);",
+        "+    EndLine(0);",
+        "+    line = line->m_pNext;",
+        "+  } while(--lines); ",
+        "   //"
+      ],
+      "margin": 0.118
+    }
+  ],
+  "breaks": [
+    {
+      "kind": "breaks",
+      "backbone": "starcoder2_lora",
+      "project": "tensorflow",
+      "cwe": [
+        "CWE-703"
+      ],
+      "cve": "",
+      "commit": "3150642acbbe254e3c3c5d2232143fa591855ac9",
+      "loc": 231,
+      "changed_lines": 5,
+      "scores": {
+        "base_vuln": 0.6537,
+        "base_patched": 0.2981,
+        "thr_base": 0.55,
+        "bask_vuln": 0.6067,
+        "bask_patched": 0.6229,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "correct",
+      "outcome_bask": "both_vuln",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::Compute",
+        "Variable::Compute::min_old_row",
+        "Variable::Compute::j",
+        "Variable::Compute::new_row",
+        "Variable::Compute::rows_copied",
+        "Variable::Compute::slice_length",
+        "Variable::Compute::row_index",
+        "Variable::Compute::old_col",
+        "Variable::Compute::max_old_row",
+        "Variable::Compute::initializing_values_index",
+        "Variable::Compute::new_col",
+        "Variable::Compute::i"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "loc": [
+          231.0,
+          236.0
+        ],
+        "n_derefs": [
+          15.0,
+          17.0
+        ],
+        "halstead_n2": [
+          317.0,
+          318.0
+        ],
+        "halstead_N1": [
+          850.0,
+          871.0
+        ],
+        "halstead_N2": [
+          1008.0,
+          1030.0
+        ],
+        "halstead_vol": [
+          15679.28,
+          16050.04
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -7,2 +7,7 @@",
+        "     OP_REQUIRES_OK(context, context->input(\"row_remapping\", &row_remapping_t));",
+        "+    OP_REQUIRES(",
+        "+        context, row_remapping_t->dims() == 1,",
+        "+        errors::InvalidArgument(\"The `row_remapping` tensor must be 1-D, got \"",
+        "+                                \"a tensor of shape \",",
+        "+                                row_remapping_t->shape().DebugString()));",
+        "     const auto row_remapping = row_remapping_t->vec<int64_t>();"
+      ],
+      "margin": -0.0162
+    },
+    {
+      "kind": "breaks",
+      "backbone": "starcoder2_lora",
+      "project": "php-src",
+      "cwe": [
+        "CWE-476"
+      ],
+      "cve": "",
+      "commit": "698a691724c0a949295991e5df091ce16f899e02",
+      "loc": 136,
+      "changed_lines": 8,
+      "scores": {
+        "base_vuln": 0.6192,
+        "base_patched": 0.4946,
+        "thr_base": 0.55,
+        "bask_vuln": 0.1391,
+        "bask_patched": 0.1918,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "correct",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::php_wddx_pop_element",
+        "Variable::php_wddx_pop_element::incomplete_class",
+        "Variable::php_wddx_pop_element::new_len",
+        "Variable::php_wddx_pop_element::new_str",
+        "Function::EG",
+        "Function::efree",
+        "Function::void",
+        "Function::Z_STRVAL_P",
+        "Function::call_user_function_ex",
+        "Function::Z_STRLEN_P",
+        "Function::Z_OBJPROP_P",
+        "Function::Z_TYPE_P"
+      ],
+      "kg_only_in_vuln": [
+        "Function::zend_str_tolower"
+      ],
+      "kg_only_in_patched": [
+        "Function::ZVAL_EMPTY_STRING"
+      ],
+      "features_changed": {
+        "loc": [
+          136.0,
+          140.0
+        ],
+        "cyclomatic": [
+          18.0,
+          19.0
+        ],
+        "n_derefs": [
+          52.0,
+          53.0
+        ],
+        "halstead_n2": [
+          126.0,
+          127.0
+        ],
+        "halstead_N1": [
+          555.0,
+          565.0
+        ],
+        "halstead_N2": [
+          396.0,
+          402.0
+        ],
+        "halstead_vol": [
+          6828.09,
+          6952.56
+        ],
+        "fan_out": [
+          33.0,
+          34.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -39,4 +39,8 @@",
+        " \t\t\tSTR_FREE(Z_STRVAL_P(ent1->data));",
+        "-\t\t\tZ_STRVAL_P(ent1->data) = new_str;",
+        "-\t\t\tZ_STRLEN_P(ent1->data) = new_len;",
+        "+\t\t\tif (new_str) {",
+        "+\t\t\t\tZ_STRVAL_P(ent1->data) = new_str;",
+        "+\t\t\t\tZ_STRLEN_P(ent1->data) = new_len;",
+        "+\t\t\t} else {",
+        "+\t\t\t\tZVAL_EMPTY_STRING(ent1->data);",
+        "+\t\t\t}",
+        " \t\t}"
+      ],
+      "margin": -0.0527
+    },
+    {
+      "kind": "breaks",
+      "backbone": "starcoder2_lora",
+      "project": "tensorflow",
+      "cwe": [
+        "CWE-125"
+      ],
+      "cve": "",
+      "commit": "002408c3696b173863228223d535f9de72a101a9",
+      "loc": 141,
+      "changed_lines": 232,
+      "scores": {
+        "base_vuln": 0.8944,
+        "base_patched": 0.3929,
+        "thr_base": 0.55,
+        "bask_vuln": 0.6829,
+        "bask_patched": 0.8738,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "correct",
+      "outcome_bask": "both_vuln",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::Compute",
+        "Variable::Compute::out_depth",
+        "Variable::Compute::b",
+        "Variable::Compute::in_rows",
+        "Variable::Compute::in_depth",
+        "Variable::Compute::out_cols",
+        "Variable::Compute::in_max_col_index",
+        "Variable::Compute::in_cols",
+        "Variable::Compute::out_batch",
+        "Variable::Compute::in_c",
+        "Variable::Compute::num_elements_in_pooling_cell",
+        "Variable::Compute::r"
+      ],
+      "kg_only_in_vuln": [
+        "Variable::Compute::out_depth",
+        "Variable::Compute::in_rows",
+        "Variable::Compute::in_depth",
+        "Variable::Compute::out_cols",
+        "Variable::Compute::in_max_col_index",
+        "Variable::Compute::in_cols",
+        "Variable::Compute::out_batch",
+        "Variable::Compute::in_c"
+      ],
+      "kg_only_in_patched": [
+        "Variable::Compute::col_end",
+        "Variable::Compute::ws",
+        "Variable::Compute::hs",
+        "Variable::Compute::row_max",
+        "Variable::Compute::col_start",
+        "Variable::Compute::row_end",
+        "Variable::Compute::h",
+        "Variable::Compute::w"
+      ],
+      "features_changed": {
+        "loc": [
+          141.0,
+          119.0
+        ],
+        "cyclomatic": [
+          8.0,
+          9.0
+        ],
+        "max_depth": [
+          7.0,
+          6.0
+        ],
+        "n_arrays": [
+          0.0,
+          38.0
+        ],
+        "n_ptr_arith": [
+          2.0,
+          0.0
+        ],
+        "n_null_check": [
+          4.0,
+          0.0
+        ],
+        "halstead_n1": [
+          24.0,
+          25.0
+        ],
+        "halstead_n2": [
+          200.0,
+          126.0
+        ],
+        "halstead_N1": [
+          560.0,
+          547.0
+        ],
+        "halstead_N2": [
+          637.0,
+          448.0
+        ],
+        "halstead_vol": [
+          9345.4,
+          7202.21
+        ],
+        "fan_out": [
+          29.0,
+          30.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -1,125 +1,112 @@",
+        " void Compute(OpKernelContext* context) override {",
+        "-    // Here's the basic idea:",
+        "-    // Batch and depth dimension are independent from row and col dimension. And",
+        "-    // because FractionalAvgPool currently only support pooling along row and",
+        "-    // col, we can basically think of this 4D tensor backpropagation as",
+        "-    // operation of a series of 2D planes.",
+        "-    //",
+        "-    // For each element of a 'slice' (2D plane) of output_backprop, we need to",
+        "-    // figure out its contributors when doing FractionalAvgPool operation. This",
+        "-    // can be done based on row_pooling_sequence, col_pooling_seq and",
+        "-    // overlapping.",
+        "-    // Once we figure out the original contributors, we just need to evenly",
+        "-    // divide the value of this element among these contributors.",
+        "-    //",
+        "-    // Internally, we divide the out_backprop tensor and store it in a temporary",
+        "-    // tensor of double type. And cast it to the corresponding type.",
+        "     typedef Eigen::Map<const Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic>>",
+        "         ConstEigenMatrixMap;",
+        "-    typedef Eigen::Map<Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>>",
+        "-        EigenDoubleMatrixMap;",
+        "-",
+        "-    // Grab the inputs.",
+        "-    const Tensor& orig_input_tensor_shape = context->input(0);",
+        "-    OP_REQUIRES(context,",
+        "-                orig_input_tensor_shape.dims() == 1 &&",
+        "-                    orig_input_tensor_shape.NumElements() == 4,",
+        "-                errors::InvalidArgument(\"original input tensor shape must be\"",
+        "-                                        \"1-dimensional and 4 elements\"));",
+        "-    const Tensor& out_backprop = context->input(1);",
+        "-    const Tensor& row_seq_tensor = context->input(2);",
+        "-    const Tensor& col_seq_tensor = context->input(3);",
+        "-",
+        "-    const int64_t out_batch = out_backprop.dim_size(0);",
+        "-    const int64_t out_rows = out_backprop.dim_size(1);",
+        "-    const int64_t out_cols = out_backprop.dim_size(2);",
+        "-    const int64_t out_depth = out_backprop.dim_size(3);",
+        "-",
+        "-    OP_REQUIRES(context, row_seq_tensor.NumElements() > out_rows,",
+        "-                errors::InvalidArgument(\"Given out_backprop shape \",",
+        "-                                        out_backprop.shape().DebugString(),",
+        "-                                        \", row_seq_tensor must have at least \",",
+        "-                                        out_rows + 1, \" elements, but got \",",
+        "-                                        row_seq_tensor.NumElements()));",
+        "-    OP_REQUIRES(context, col_seq_tensor.NumElements() > out_cols,",
+        "-                errors::InvalidArgument(\"Given out_backprop shape \",",
+        "-                                        out_backprop.shape().DebugString(),",
+        "-                                        \", col_seq_tensor must have at least \",",
+        "-                                        out_cols + 1, \" elements, but got \",",
+        "-                                        col_seq_tensor.NumElements()));",
+        "-",
+        "-    auto row_seq_tensor_flat = row_seq_tensor.flat<int64_t>();",
+        "-    auto col_seq_tensor_flat = col_seq_tensor.flat<int64_t>();",
+        "-    auto orig_input_tensor_shape_flat = orig_input_tensor_shape.flat<int64_t>();",
+        "-",
+        "-    const int64_t in_batch = orig_input_tensor_shape_flat(0);",
+        "-    const int64_t in_rows = orig_input_tensor_shape_flat(1);",
+        "-    const int64_t in_cols = orig_input_tensor_shape_flat(2);",
+        "-    const int64_t in_depth = orig_input_tensor_shape_flat(3);",
+        "-    OP_REQUIRES(",
+        "-        context, in_batch != 0,",
+        "-        errors::InvalidArgument(\"Batch dimension of input must not be 0\"));",
+        "-    OP_REQUIRES(",
+        "-        context, in_rows != 0,",
+        "-        errors::InvalidArgument(\"Rows dimension of input must not be 0\"));",
+        "-    OP_REQUIRES(",
+        "-        context, in_cols != 0,",
+        "-        errors::InvalidArgument(\"Columns dimension of input must not be 0\"));",
+        "-    OP_REQUIRES(",
+        "-        context, in_depth != 0,",
+        "-        errors::InvalidArgument(\"Depth dimension of input must not be 0\"));",
+        "+    typedef Eigen::Map<Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic>>",
+        "+        EigenMatrixMap;",
+        " ",
+        "     constexpr int tensor_in_and_out_dims = 4;",
+        "-    // Transform orig_input_tensor_shape into TensorShape",
+        "-    TensorShape in_shape;",
+        "-    for (auto i = 0; i < tensor_in_and_out_dims; ++i) {",
+        "-      in_shape.AddDim(orig_input_tensor_shape_flat(i));",
+        "+",
+        "+    const Tensor& tensor_in = context->input(0);",
+        "+    OP_REQUIRES(context, tensor_in.dims() == tensor_in_and_out_dims,",
+        "+                errors::InvalidArgument(\"tensor_in must be 4-dimensional\"));",
+        "+",
+        "+    std::vector<int> input_size(tensor_in_and_out_dims);",
+        "+    std::vector<int> output_size(tensor_in_and_out_dims);",
+        "+    for (int i = 0; i < tensor_in_and_out_dims; ++i) {",
+        "+      input_size[i] = tensor_in.dim_size(i);",
+        "+      OP_REQUIRES(",
+        "+          context, pooling_ratio_[i] <= input_size[i],",
+        "+          errors::InvalidArgument(",
+        "+              \"Pooling ratio cannot be bigger than input tensor dim size.\"));",
+        "+    }",
+        "+    // Output size.",
+        "+    for (int i = 0; i < tensor_in_and_out_dims; ++i) {",
+        "+      output_size[i] =",
+        "+          static_cast<int>(std::floor(input_size[i] / pooling_ratio_[i]));",
+        "+      DCHECK_GT(output_size[i], 0);",
+        "     }",
+        " ",
+        "-    // Create intermediate in_backprop.",
+        "-    Tensor in_backprop_tensor_temp;",
+        "-    OP_REQUIRES_OK(context, context->forward_input_or_allocate_temp(",
+        "-                                {0}, DataTypeToEnum<double>::v(), in_shape,",
+        "-                                &in_backprop_tensor_temp));",
+        "-    in_backprop_tensor_temp.flat<double>().setZero();",
+        "-    // Transform 4D tensor to 2D matrix.",
+        "-    EigenDoubleMatrixMap in_backprop_tensor_temp_mat(",
+        "-        in_backprop_tensor_temp.flat<double>().data(), in_depth,",
+        "-        in_cols * in_rows * in_batch);",
+        "-    ConstEigenMatrixMap out_backprop_mat(out_backprop.flat<T>().data(),",
+        "-                                         out_depth,",
+        "-                                         out_cols * out_rows * out_batch);",
+        "-    // Loop through each element of out_backprop and evenly distribute the",
+        "-    // element to the corresponding pooling cell.",
+        "-    const int64_t in_max_row_index = in_rows - 1;",
+        "-    const int64_t in_max_col_index = in_cols - 1;",
+        "-    for (int64_t b = 0; b < out_batch; ++b) {",
+        "-      for (int64_t r = 0; r < out_rows; ++r) {",
+        "-        const int64_t in_row_start = row_seq_tensor_flat(r);",
+        "-        int64_t in_row_end = overlapping_ ? row_seq_tensor_flat(r + 1)",
+        "-                                          : row_seq_tensor_flat(r + 1) - 1;",
+        "-        in_row_end = std::min(in_row_end, in_max_row_index);",
+        "-        for (int64_t c = 0; c < out_cols; ++c) {",
+        "-          const int64_t in_col_start = col_seq_tensor_flat(c);",
+        "-          int64_t in_col_end = overlapping_ ? col_seq_tensor_flat(c + 1)",
+        "-                                            : col_seq_tensor_flat(c + 1) - 1;",
+        "-          in_col_end = std::min(in_col_end, in_max_col_index);",
+        "+    // Generate pooling sequence.",
+        "+    std::vector<int64_t> row_cum_seq;",
+        "+    std::vector<int64_t> col_cum_seq;",
+        "+    GuardedPhiloxRandom generator;",
+        "+    generator.Init(seed_, seed2_);",
+        "+    row_cum_seq = GeneratePoolingSequence(input_size[1], output_size[1],",
+        "+                                          &generator, pseudo_random_);",
+        "+    col_cum_seq = GeneratePoolingSequence(input_size[2], output_size[2],",
+        "+                                          &generator, pseudo_random_);",
+        " ",
+        "-          const int64_t num_elements_in_pooling_cell =",
+        "-              (in_row_end - in_row_start + 1) * (in_col_end - in_col_start + 1);",
+        "-          const int64_t out_index = (b * out_rows + r) * out_cols + c;",
+        "-          // Now we can evenly distribute out_backprop(b, h, w, *) to",
+        "-          // in_backprop(b, hs:he, ws:we, *).",
+        "-          for (int64_t in_r = in_row_start; in_r <= in_row_end; ++in_r) {",
+        "-            for (int64_t in_c = in_col_start; in_c <= in_col_end; ++in_c) {",
+        "-              const int64_t in_index = (b * in_rows + in_r) * in_cols + in_c;",
+        "-              // Walk through each channel (depth).",
+        "-              for (int64_t d = 0; d < out_depth; ++d) {",
+        "-                const double out_backprop_element = static_cast<double>(",
+        "-                    out_backprop_mat.coeffRef(d, out_index));",
+        "-                double& in_backprop_ref =",
+        "-                    in_backprop_tensor_temp_mat.coeffRef(d, in_index);",
+        "-                in_backprop_ref +=",
+        "-                    out_backprop_element / num_elements_in_pooling_cell;",
+        "-              }",
+        "+    // Prepare output.",
+        "+    Tensor* output_tensor = nullptr;",
+        "+    OP_REQUIRES_OK(context, context->allocate_output(",
+        "+                                0,",
+        "+                                TensorShape({output_size[0], output_size[1],",
+        "+                                             output_size[2], output_size[3]}),",
+        "+                                &output_tensor));",
+        "+    Tensor* output_row_seq_tensor = nullptr;",
+        "+    OP_REQUIRES_OK(",
+        "+        context, context->allocate_output(",
+        "+                     1, TensorShape({static_cast<int64_t>(row_cum_seq.size())}),",
+        "+                     &output_row_seq_tensor));",
+        "+    Tensor* output_col_seq_tensor = nullptr;",
+        "+    OP_REQUIRES_OK(",
+        "+        context, context->allocate_output(",
+        "+                     2, TensorShape({static_cast<int64_t>(col_cum_seq.size())}),",
+        "+                     &output_col_seq_tensor));",
+        "+",
+        "+    ConstEigenMatrixMap in_mat(tensor_in.flat<T>().data(), input_size[3],",
+        "+                               input_size[2] * input_size[1] * input_size[0]);",
+        "+",
+        "+    EigenMatrixMap out_mat(output_tensor->flat<T>().data(), output_size[3],",
+        "+                           output_size[2] * output_size[1] * output_size[0]);",
+        "+    // out_count corresponds to number of elements in each pooling cell.",
+        "+    Eigen::Matrix<T, Eigen::Dynamic, 1> out_count(out_mat.cols());",
+        "+",
+        "+    // Initializes the output tensor and out_count with 0.",
+        "+    out_mat.setZero();",
+        "+    out_count.setZero();",
+        "+",
+        "+    auto output_row_seq_flat = output_row_seq_tensor->flat<int64_t>();",
+        "+    auto output_col_seq_flat = output_col_seq_tensor->flat<int64_t>();",
+        "+",
+        "+    // Set output tensors.",
+        "+    for (int i = 0; i < row_cum_seq.size(); ++i) {",
+        "+      output_row_seq_flat(i) = row_cum_seq[i];",
+        "+    }",
+        "+",
+        "+    for (int i = 0; i < col_cum_seq.size(); ++i) {",
+        "+      output_col_seq_flat(i) = col_cum_seq[i];",
+        "+    }",
+        "+",
+        "+    // For both input and output,",
+        "+    // 0: batch",
+        "+    // 1: row / row",
+        "+    // 2: col / col",
+        "+    // 3: depth / channel",
+        "+    const int64_t row_max = input_size[1] - 1;",
+        "+    const int64_t col_max = input_size[2] - 1;",
+        "+    for (int64_t b = 0; b < input_size[0]; ++b) {",
+        "+      // row sequence.",
+        "+      for (int64_t hs = 0; hs < row_cum_seq.size() - 1; ++hs) {",
+        "+        // row start and end.",
+        "+        const int64_t row_start = row_cum_seq[hs];",
+        "+        int64_t row_end =",
+        "+            overlapping_ ? row_cum_seq[hs + 1] : row_cum_seq[hs + 1] - 1;",
+        "+        row_end = std::min(row_end, row_max);",
+        "+",
+        "+        // col sequence.",
+        "+        for (int64_t ws = 0; ws < col_cum_seq.size() - 1; ++ws) {",
+        "+          const int64_t out_offset =",
+        "+              (b * output_size[1] + hs) * output_size[2] + ws;",
+        "+          // col start and end.",
+        "+          const int64_t col_start = col_cum_seq[ws];",
+        "+          int64_t col_end =",
+        "+              overlapping_ ? col_cum_seq[ws + 1] : col_cum_seq[ws + 1] - 1;",
+        "+          col_end = std::min(col_end, col_max);",
+        "+          for (int64_t h = row_start; h <= row_end; ++h) {",
+        "+            for (int64_t w = col_start; w <= col_end; ++w) {",
+        "+              const int64_t in_offset =",
+        "+                  (b * input_size[1] + h) * input_size[2] + w;",
+        "+              out_mat.col(out_offset) += in_mat.col(in_offset);",
+        "+              out_count(out_offset)++;",
+        "             }",
+        "@@ -129,13 +116,4 @@",
+        "     }",
+        "-",
+        "-    // Depending on the type, cast double to type T.",
+        "-    Tensor* in_backprop_tensor = nullptr;",
+        "-    OP_REQUIRES_OK(context, context->forward_input_or_allocate_output(",
+        "-                                {0}, 0, in_shape, &in_backprop_tensor));",
+        "-    auto in_backprop_tensor_flat = in_backprop_tensor->flat<T>();",
+        "-    auto in_backprop_tensor_temp_flat = in_backprop_tensor_temp.flat<double>();",
+        "-    for (int64_t i = 0; i < in_backprop_tensor_flat.size(); ++i) {",
+        "-      in_backprop_tensor_flat(i) =",
+        "-          static_cast<T>(in_backprop_tensor_temp_flat(i));",
+        "-    }",
+        "+    DCHECK_GT(out_count.minCoeff(), 0);",
+        "+    out_mat.array().rowwise() /= out_count.transpose().array();",
+        "   }"
+      ],
+      "margin": -0.1909
+    }
+  ],
+  "both_fail": [
+    {
+      "kind": "both_fail",
+      "backbone": "starcoder2_lora",
+      "project": "linux",
+      "cwe": [
+        "CWE-834"
+      ],
+      "cve": "",
+      "commit": "775c5033a0d164622d9d10dd0f0a5531639ed3ed",
+      "loc": 4,
+      "changed_lines": 1,
+      "scores": {
+        "base_vuln": 0.0,
+        "base_patched": 0.0,
+        "thr_base": 0.55,
+        "bask_vuln": 0.0119,
+        "bask_patched": 0.0091,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::fuse_make_bad",
+        "Function::set_bit",
+        "Function::get_fuse_inode",
+        "Type::inode",
+        "Function::__ctl_set_bit",
+        "Function::__iwl_trans_pcie_set_bit",
+        "Function::__iwl_trans_pcie_set_bits_mask",
+        "Function::__set_bit",
+        "Function::__set_bit_le",
+        "Function::__test_and_set_bit",
+        "Function::a",
+        "Function::ath6kl_set_bitrate_mask32"
+      ],
+      "kg_only_in_vuln": [
+        "Function::__set_bit",
+        "Function::__set_bit_le",
+        "Function::__test_and_set_bit",
+        "Function::a",
+        "Function::ath6kl_set_bitrate_mask32",
+        "Function::ath6kl_set_bitrate_mask64",
+        "Function::ath6kl_wmi_set_bitrate_mask",
+        "Function::b"
+      ],
+      "kg_only_in_patched": [
+        "Function::remove_inode_hash",
+        "Function::__bfq_weights_tree_remove",
+        "Function::__bnx2x_remove",
+        "Function::__debugfs_remove",
+        "Function::__dev_remove_offload",
+        "Function::__dev_remove_pack",
+        "Function::__dmar_remove_one_dev_info",
+        "Function::__gvt_cache_remove_entry"
+      ],
+      "features_changed": {
+        "loc": [
+          4.0,
+          5.0
+        ],
+        "halstead_n2": [
+          10.0,
+          11.0
+        ],
+        "halstead_N1": [
+          13.0,
+          16.0
+        ],
+        "halstead_N2": [
+          12.0,
+          14.0
+        ],
+        "halstead_vol": [
+          106.2,
+          129.66
+        ],
+        "fan_out": [
+          3.0,
+          4.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -2,2 +2,3 @@",
+        " {",
+        "+\tremove_inode_hash(inode);",
+        " \tset_bit(FUSE_I_BAD, &get_fuse_inode(inode)->state);"
+      ],
+      "margin": 0.0029
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "starcoder2_lora",
+      "project": "tensorflow",
+      "cwe": [
+        "CWE-125"
+      ],
+      "cve": "",
+      "commit": "701cfaca222a82afbeeb17496bd718baa65a67d2",
+      "loc": 8,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0,
+        "base_patched": 0.0,
+        "thr_base": 0.55,
+        "bask_vuln": 0.0581,
+        "bask_patched": 0.0656,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 8,
+      "kg_slots_patched": 10,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::SparseCountSparseOutputShapeFn",
+        "Function::input",
+        "Function::OK",
+        "Function::Vector",
+        "Function::Matrix",
+        "Function::UnknownDim",
+        "Function::Dim",
+        "Function::set_output"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [
+        "Function::TF_RETURN_IF_ERROR",
+        "Function::WithRank"
+      ],
+      "features_changed": {
+        "loc": [
+          8.0,
+          10.0
+        ],
+        "n_derefs": [
+          9.0,
+          11.0
+        ],
+        "halstead_n1": [
+          11.0,
+          12.0
+        ],
+        "halstead_n2": [
+          22.0,
+          26.0
+        ],
+        "halstead_N1": [
+          55.0,
+          68.0
+        ],
+        "halstead_N2": [
+          44.0,
+          54.0
+        ],
+        "halstead_vol": [
+          499.4,
+          640.25
+        ],
+        "fan_out": [
+          8.0,
+          10.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -1,2 +1,4 @@",
+        " Status SparseCountSparseOutputShapeFn(InferenceContext *c) {",
+        "+  ShapeHandle unused;",
+        "+  TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));",
+        "   auto rank = c->Dim(c->input(0), 1);"
+      ],
+      "margin": -0.0075
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "starcoder2_lora",
+      "project": "qemu",
+      "cwe": [
+        "CWE-835"
+      ],
+      "cve": "",
+      "commit": "1caff0340f49c93d535c6558a5138d20d475315c",
+      "loc": 14,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0,
+        "base_patched": 0.0,
+        "thr_base": 0.55,
+        "bask_vuln": 0.0216,
+        "bask_patched": 0.0216,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::e1000_send_packet",
+        "Variable::e1000_send_packet::PTCregs",
+        "Variable::e1000_send_packet::buf",
+        "Function::receive",
+        "Function::qemu_send_packet",
+        "Function::inc_tx_bcast_or_mcast_count",
+        "Function::qemu_get_queue",
+        "Function::e1000x_increase_size_stats",
+        "Type::uint8_t",
+        "Function::a",
+        "Function::at",
+        "Function::can_receive"
+      ],
+      "kg_only_in_vuln": [
+        "Function::receive",
+        "Function::can_receive",
+        "Function::dp8393x_can_receive",
+        "Function::dp8393x_do_receiver_disable",
+        "Function::dp8393x_do_receiver_enable",
+        "Function::dp8393x_receive",
+        "Function::dp8393x_receive_filter"
+      ],
+      "kg_only_in_patched": [
+        "Function::qemu_receive_packet",
+        "Function::e1000_mit_timer",
+        "Function::e1000_mmio_read",
+        "Function::e1000_mmio_setup",
+        "Function::e1000_mmio_write",
+        "Function::e1000_post_load",
+        "Function::e1000_pre_save"
+      ],
+      "features_changed": {
+        "n_derefs": [
+          5.0,
+          3.0
+        ],
+        "halstead_n2": [
+          32.0,
+          31.0
+        ],
+        "halstead_N1": [
+          57.0,
+          55.0
+        ],
+        "halstead_N2": [
+          48.0,
+          46.0
+        ],
+        "halstead_vol": [
+          573.24,
+          548.05
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -7,3 +7,3 @@",
+        "     if (s->phy_reg[PHY_CTRL] & MII_CR_LOOPBACK) {",
+        "-        nc->info->receive(nc, buf, size);",
+        "+        qemu_receive_packet(nc, buf, size);",
+        "     } else {"
+      ],
+      "margin": 0.0
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "starcoder2_lora",
+      "project": "vim",
+      "cwe": [
+        "CWE-476"
+      ],
+      "cve": "",
+      "commit": "8e4b76da1d7e987d43ca960dfbc372d1c617466f",
+      "loc": 26,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.2004,
+        "base_patched": 0.0862,
+        "thr_base": 0.55,
+        "bask_vuln": 0.0407,
+        "bask_patched": 0.038,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 4,
+      "kg_slots_patched": 4,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::fname_match",
+        "Function::vim_regexec",
+        "Function::vim_free",
+        "Function::home_replace_save"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "cyclomatic": [
+          5.0,
+          6.0
+        ],
+        "n_derefs": [
+          1.0,
+          2.0
+        ],
+        "n_null_check": [
+          2.0,
+          3.0
+        ],
+        "halstead_n2": [
+          41.0,
+          42.0
+        ],
+        "halstead_N1": [
+          65.0,
+          69.0
+        ],
+        "halstead_N2": [
+          70.0,
+          74.0
+        ],
+        "halstead_vol": [
+          780.48,
+          830.45
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -14,3 +14,3 @@",
+        " \t    match = name;",
+        "-\telse",
+        "+\telse if (rmp->regprog != NULL)",
+        " \t{"
+      ],
+      "margin": 0.0027
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "starcoder2_lora",
+      "project": "nagioscore",
+      "cwe": [
+        "CWE-476"
+      ],
+      "cve": "",
+      "commit": "b1a92a3b52d292ccb601e77a0b29cb1e67ac9d76",
+      "loc": 33,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0,
+        "base_patched": 0.0,
+        "thr_base": 0.55,
+        "bask_vuln": 0.0235,
+        "bask_patched": 0.0223,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 16,
+      "kg_slots_patched": 16,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::qh_help",
+        "Variable::qh_help::sd",
+        "Variable::qh_help::buf",
+        "Function::nsock_printf_nul",
+        "Function::handler",
+        "Function::qh_find_handler",
+        "Function::nsock_printf",
+        "GLOBAL::ExternalAPI::strcmp",
+        "Type::query_handler",
+        "Function::nsock_strerror",
+        "Function::nsock_unix",
+        "Function::p"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "n_null_check": [
+          2.0,
+          3.0
+        ],
+        "halstead_N1": [
+          103.0,
+          102.0
+        ],
+        "halstead_N2": [
+          106.0,
+          107.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -4,3 +4,3 @@",
+        " ",
+        "-\tif (!*buf || !strcmp(buf, \"help\")) {",
+        "+\tif (buf == NULL || !strcmp(buf, \"help\")) {",
+        " \t\tnsock_printf_nul(sd,"
+      ],
+      "margin": 0.0012
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "returncode": 0,
+  "wall_s": 43.44255970045924,
+  "user_cpu_s": 41.469596,
+  "sys_cpu_s": 1.911889,
+  "peak_rss_gb": 1.0138473510742188,
+  "n_projects": 660,
+  "n_nodes": 701959,
+  "n_edges": 4242015,
+  "n_funcs": 224062
+}

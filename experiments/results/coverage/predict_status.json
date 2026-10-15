@@ -1,0 +1,214 @@
+{
+  "codebert_full_base": {
+    "checkpoint": "encoders_base/A_codebert",
+    "threshold": 0.05,
+    "recomputed": {
+      "VD-S_FNR": 90.89253187613843,
+      "AUC": 0.8320988522688939,
+      "F1": 0.20725388601036268,
+      "P-C": 18.550106609808104
+    },
+    "published": {
+      "VD-S_FNR": 90.89253187613843,
+      "AUC": 0.8320987395480541,
+      "F1": 0.20725388601036268,
+      "P-C": 18.550106609808104
+    },
+    "matches_published": true
+  },
+  "codebert_full_bridge": {
+    "checkpoint": "encoders_bask/D_codebert_bridge",
+    "threshold": 0.77,
+    "recomputed": {
+      "VD-S_FNR": 89.25318761384335,
+      "AUC": 0.8222307814913282,
+      "F1": 0.2185022026431718,
+      "P-C": 14.498933901918976
+    },
+    "published": {
+      "VD-S_FNR": 89.25318761384335,
+      "AUC": 0.8222187955086906,
+      "F1": 0.2185022026431718,
+      "P-C": 14.498933901918976
+    },
+    "matches_published": true
+  },
+  "unixcoder_full_base": {
+    "checkpoint": "encoders_base/B_unixcoder",
+    "threshold": 0.04,
+    "recomputed": {
+      "VD-S_FNR": 89.79963570127505,
+      "AUC": 0.7672378532210844,
+      "F1": 0.20850040096230954,
+      "P-C": 13.432835820895523
+    },
+    "published": {
+      "VD-S_FNR": 89.79963570127505,
+      "AUC": 0.7672375526321782,
+      "F1": 0.20850040096230954,
+      "P-C": 13.432835820895523
+    },
+    "matches_published": true
+  },
+  "unixcoder_full_bridge": {
+    "checkpoint": "encoders_bask/E_unixcoder_bridge",
+    "threshold": 0.12,
+    "recomputed": {
+      "VD-S_FNR": 88.34244080145719,
+      "AUC": 0.792649564209961,
+      "F1": 0.2194891201513718,
+      "P-C": 12.153518123667377
+    },
+    "published": {
+      "VD-S_FNR": 88.34244080145719,
+      "AUC": 0.7926468213361914,
+      "F1": 0.2194891201513718,
+      "P-C": 12.153518123667377
+    },
+    "matches_published": true
+  },
+  "starcoder_lora_base": {
+    "checkpoint": "llm_starcoder/G0_starcoder_base",
+    "threshold": 0.05,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 92.34972677595628,
+      "AUC": 0.8205859589962163,
+      "F1": 0.18181818181818182,
+      "P-C": 11.300639658848615
+    },
+    "published": {
+      "VD-S_FNR": 92.34972677595628,
+      "AUC": 0.8206431836092477,
+      "F1": 0.18042813455657492,
+      "P-C": 11.087420042643924
+    },
+    "matches_published": false
+  },
+  "starcoder_lora_bridge": {
+    "checkpoint": "llm_starcoder/G_starcoder_bridge",
+    "threshold": 0.12,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 89.25318761384335,
+      "AUC": 0.8081797154941032,
+      "F1": 0.22553897180762852,
+      "P-C": 15.13859275053305
+    },
+    "published": {
+      "VD-S_FNR": 89.07103825136612,
+      "AUC": 0.8082922860395014,
+      "F1": 0.22553897180762852,
+      "P-C": 15.13859275053305
+    },
+    "matches_published": false
+  },
+  "qwen_lora_base": {
+    "checkpoint": "llm_qwen/I0_qwen_base",
+    "threshold": 0.3,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 90.1639344262295,
+      "AUC": 0.8236800333292978,
+      "F1": 0.23125564588979222,
+      "P-C": 15.13859275053305
+    },
+    "published": {
+      "VD-S_FNR": 90.1639344262295,
+      "AUC": 0.8236550844500773,
+      "F1": 0.23104693140794225,
+      "P-C": 14.925373134328357
+    },
+    "matches_published": false
+  },
+  "qwen_lora_bridge": {
+    "checkpoint": "llm_qwen/I_qwen_bridge",
+    "threshold": 0.23,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 90.1639344262295,
+      "AUC": 0.8438063768583816,
+      "F1": 0.23820943245403678,
+      "P-C": 15.13859275053305
+    },
+    "published": {
+      "VD-S_FNR": 90.1639344262295,
+      "AUC": 0.843816371439515,
+      "F1": 0.24,
+      "P-C": 15.56503198294243
+    },
+    "matches_published": false
+  },
+  "starcoder2_lora_base": {
+    "checkpoint": "llm_starcoder2/J0_starcoder2_base",
+    "threshold": 0.55,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 89.98178506375227,
+      "AUC": 0.7634486670422526,
+      "F1": 0.21695533272561532,
+      "P-C": 13.859275053304904
+    },
+    "published": {
+      "VD-S_FNR": 90.1639344262295,
+      "AUC": 0.7642321896000597,
+      "F1": 0.21695533272561532,
+      "P-C": 13.646055437100213
+    },
+    "matches_published": false
+  },
+  "starcoder2_lora_bridge": {
+    "checkpoint": "llm_starcoder2/J_starcoder2_bridge",
+    "threshold": 0.23,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 89.25318761384335,
+      "AUC": 0.8332658135502622,
+      "F1": 0.23468634686346865,
+      "P-C": 16.417910447761194
+    },
+    "published": {
+      "VD-S_FNR": 89.25318761384335,
+      "AUC": 0.8335728275444043,
+      "F1": 0.23624358033749082,
+      "P-C": 16.844349680170577
+    },
+    "matches_published": false
+  },
+  "deepseek_lora_base": {
+    "checkpoint": "llm_deepseek/H0_deepseek_base",
+    "threshold": 0.02,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 91.2568306010929,
+      "AUC": 0.8182485420874441,
+      "F1": 0.1977135171486214,
+      "P-C": 17.91044776119403
+    },
+    "published": {
+      "VD-S_FNR": 91.43897996357013,
+      "AUC": 0.8171494387516663,
+      "F1": 0.1857541899441341,
+      "P-C": 15.778251599147122
+    },
+    "matches_published": false
+  },
+  "deepseek_lora_bridge": {
+    "checkpoint": "llm_deepseek/H_deepseek_bridge",
+    "threshold": 0.03,
+    "eval_batch_size": 128,
+    "recomputed": {
+      "VD-S_FNR": 91.43897996357013,
+      "AUC": 0.8048446440054193,
+      "F1": 0.20347394540942929,
+      "P-C": 16.417910447761194
+    },
+    "published": {
+      "VD-S_FNR": 88.88888888888889,
+      "AUC": 0.8018928985194569,
+      "F1": 0.19946571682991987,
+      "P-C": 13.432835820895523
+    },
+    "matches_published": false
+  }
+}

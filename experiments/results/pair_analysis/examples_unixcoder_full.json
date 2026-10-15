@@ -1,0 +1,508 @@
+{
+  "fixes": [],
+  "breaks": [
+    {
+      "kind": "breaks",
+      "backbone": "unixcoder_full",
+      "project": "dpdk",
+      "cwe": [
+        "CWE-703"
+      ],
+      "cve": "",
+      "commit": "af74f7db384ed149fe42b21dbd7975f8a54ef227",
+      "loc": 96,
+      "changed_lines": 3,
+      "scores": {
+        "base_vuln": 0.6399,
+        "base_patched": 0.0379,
+        "thr_base": 0.04,
+        "bask_vuln": 0.9132,
+        "bask_patched": 0.8493,
+        "thr_bask": 0.12
+      },
+      "outcome_base": "correct",
+      "outcome_bask": "both_vuln",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::vhost_user_set_inflight_fd",
+        "Variable::vhost_user_set_inflight_fd::mmap_size",
+        "Variable::vhost_user_set_inflight_fd::num_queues",
+        "Variable::vhost_user_set_inflight_fd::numa_node",
+        "Variable::vhost_user_set_inflight_fd::pervq_inflight_size",
+        "Variable::vhost_user_set_inflight_fd::fd",
+        "GLOBAL::ExternalAPI::close",
+        "Function::numa_realloc",
+        "Function::vq_is_packed",
+        "Function::VHOST_LOG_CONFIG",
+        "Function::rte_zmalloc_socket",
+        "GLOBAL::ExternalAPI::munmap"
+      ],
+      "kg_only_in_vuln": [
+        "Function::read_vhost_message",
+        "Function::rte_vhost_dequeue_burst"
+      ],
+      "kg_only_in_patched": [
+        "Function::validate_msg_fds",
+        "Function::is_vring_iotlb_invalidate"
+      ],
+      "features_changed": {
+        "loc": [
+          96.0,
+          99.0
+        ],
+        "cyclomatic": [
+          11.0,
+          12.0
+        ],
+        "n_returns": [
+          4.0,
+          5.0
+        ],
+        "n_null_check": [
+          1.0,
+          2.0
+        ],
+        "halstead_n2": [
+          100.0,
+          101.0
+        ],
+        "halstead_N1": [
+          334.0,
+          342.0
+        ],
+        "halstead_N2": [
+          331.0,
+          339.0
+        ],
+        "halstead_vol": [
+          4632.25,
+          4751.53
+        ],
+        "fan_out": [
+          10.0,
+          11.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -12,2 +12,5 @@",
+        " \tint numa_node = SOCKET_ID_ANY;",
+        "+",
+        "+\tif (validate_msg_fds(dev, ctx, 1) != 0)",
+        "+\t\treturn RTE_VHOST_MSG_RESULT_ERR;",
+        " "
+      ],
+      "margin": 0.0639
+    }
+  ],
+  "both_fail": [
+    {
+      "kind": "both_fail",
+      "backbone": "unixcoder_full",
+      "project": "linux",
+      "cwe": [
+        "CWE-834"
+      ],
+      "cve": "",
+      "commit": "775c5033a0d164622d9d10dd0f0a5531639ed3ed",
+      "loc": 4,
+      "changed_lines": 1,
+      "scores": {
+        "base_vuln": 0.0003,
+        "base_patched": 0.0003,
+        "thr_base": 0.04,
+        "bask_vuln": 0.0008,
+        "bask_patched": 0.0009,
+        "thr_bask": 0.12
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::fuse_make_bad",
+        "Function::set_bit",
+        "Function::get_fuse_inode",
+        "Type::inode",
+        "Function::__ctl_set_bit",
+        "Function::__iwl_trans_pcie_set_bit",
+        "Function::__iwl_trans_pcie_set_bits_mask",
+        "Function::__set_bit",
+        "Function::__set_bit_le",
+        "Function::__test_and_set_bit",
+        "Function::a",
+        "Function::ath6kl_set_bitrate_mask32"
+      ],
+      "kg_only_in_vuln": [
+        "Function::__set_bit",
+        "Function::__set_bit_le",
+        "Function::__test_and_set_bit",
+        "Function::a",
+        "Function::ath6kl_set_bitrate_mask32",
+        "Function::ath6kl_set_bitrate_mask64",
+        "Function::ath6kl_wmi_set_bitrate_mask",
+        "Function::b"
+      ],
+      "kg_only_in_patched": [
+        "Function::remove_inode_hash",
+        "Function::__bfq_weights_tree_remove",
+        "Function::__bnx2x_remove",
+        "Function::__debugfs_remove",
+        "Function::__dev_remove_offload",
+        "Function::__dev_remove_pack",
+        "Function::__dmar_remove_one_dev_info",
+        "Function::__gvt_cache_remove_entry"
+      ],
+      "features_changed": {
+        "loc": [
+          4.0,
+          5.0
+        ],
+        "halstead_n2": [
+          10.0,
+          11.0
+        ],
+        "halstead_N1": [
+          13.0,
+          16.0
+        ],
+        "halstead_N2": [
+          12.0,
+          14.0
+        ],
+        "halstead_vol": [
+          106.2,
+          129.66
+        ],
+        "fan_out": [
+          3.0,
+          4.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -2,2 +2,3 @@",
+        " {",
+        "+\tremove_inode_hash(inode);",
+        " \tset_bit(FUSE_I_BAD, &get_fuse_inode(inode)->state);"
+      ],
+      "margin": -0.0001
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "unixcoder_full",
+      "project": "tensorflow",
+      "cwe": [
+        "CWE-125"
+      ],
+      "cve": "",
+      "commit": "701cfaca222a82afbeeb17496bd718baa65a67d2",
+      "loc": 8,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0017,
+        "base_patched": 0.012,
+        "thr_base": 0.04,
+        "bask_vuln": 0.0013,
+        "bask_patched": 0.009,
+        "thr_bask": 0.12
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 8,
+      "kg_slots_patched": 10,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::SparseCountSparseOutputShapeFn",
+        "Function::input",
+        "Function::OK",
+        "Function::Vector",
+        "Function::Matrix",
+        "Function::UnknownDim",
+        "Function::Dim",
+        "Function::set_output"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [
+        "Function::TF_RETURN_IF_ERROR",
+        "Function::WithRank"
+      ],
+      "features_changed": {
+        "loc": [
+          8.0,
+          10.0
+        ],
+        "n_derefs": [
+          9.0,
+          11.0
+        ],
+        "halstead_n1": [
+          11.0,
+          12.0
+        ],
+        "halstead_n2": [
+          22.0,
+          26.0
+        ],
+        "halstead_N1": [
+          55.0,
+          68.0
+        ],
+        "halstead_N2": [
+          44.0,
+          54.0
+        ],
+        "halstead_vol": [
+          499.4,
+          640.25
+        ],
+        "fan_out": [
+          8.0,
+          10.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -1,2 +1,4 @@",
+        " Status SparseCountSparseOutputShapeFn(InferenceContext *c) {",
+        "+  ShapeHandle unused;",
+        "+  TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));",
+        "   auto rank = c->Dim(c->input(0), 1);"
+      ],
+      "margin": -0.0077
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "unixcoder_full",
+      "project": "qemu",
+      "cwe": [
+        "CWE-835"
+      ],
+      "cve": "",
+      "commit": "1caff0340f49c93d535c6558a5138d20d475315c",
+      "loc": 14,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0005,
+        "base_patched": 0.0004,
+        "thr_base": 0.04,
+        "bask_vuln": 0.0011,
+        "bask_patched": 0.0011,
+        "thr_bask": 0.12
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::e1000_send_packet",
+        "Variable::e1000_send_packet::PTCregs",
+        "Variable::e1000_send_packet::buf",
+        "Function::receive",
+        "Function::qemu_send_packet",
+        "Function::inc_tx_bcast_or_mcast_count",
+        "Function::qemu_get_queue",
+        "Function::e1000x_increase_size_stats",
+        "Type::uint8_t",
+        "Function::a",
+        "Function::at",
+        "Function::can_receive"
+      ],
+      "kg_only_in_vuln": [
+        "Function::receive",
+        "Function::can_receive",
+        "Function::dp8393x_can_receive",
+        "Function::dp8393x_do_receiver_disable",
+        "Function::dp8393x_do_receiver_enable",
+        "Function::dp8393x_receive",
+        "Function::dp8393x_receive_filter"
+      ],
+      "kg_only_in_patched": [
+        "Function::qemu_receive_packet",
+        "Function::e1000_mit_timer",
+        "Function::e1000_mmio_read",
+        "Function::e1000_mmio_setup",
+        "Function::e1000_mmio_write",
+        "Function::e1000_post_load",
+        "Function::e1000_pre_save"
+      ],
+      "features_changed": {
+        "n_derefs": [
+          5.0,
+          3.0
+        ],
+        "halstead_n2": [
+          32.0,
+          31.0
+        ],
+        "halstead_N1": [
+          57.0,
+          55.0
+        ],
+        "halstead_N2": [
+          48.0,
+          46.0
+        ],
+        "halstead_vol": [
+          573.24,
+          548.05
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -7,3 +7,3 @@",
+        "     if (s->phy_reg[PHY_CTRL] & MII_CR_LOOPBACK) {",
+        "-        nc->info->receive(nc, buf, size);",
+        "+        qemu_receive_packet(nc, buf, size);",
+        "     } else {"
+      ],
+      "margin": 0.0001
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "unixcoder_full",
+      "project": "vim",
+      "cwe": [
+        "CWE-476"
+      ],
+      "cve": "",
+      "commit": "8e4b76da1d7e987d43ca960dfbc372d1c617466f",
+      "loc": 26,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0008,
+        "base_patched": 0.0014,
+        "thr_base": 0.04,
+        "bask_vuln": 0.0011,
+        "bask_patched": 0.0021,
+        "thr_bask": 0.12
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 4,
+      "kg_slots_patched": 4,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::fname_match",
+        "Function::vim_regexec",
+        "Function::vim_free",
+        "Function::home_replace_save"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "cyclomatic": [
+          5.0,
+          6.0
+        ],
+        "n_derefs": [
+          1.0,
+          2.0
+        ],
+        "n_null_check": [
+          2.0,
+          3.0
+        ],
+        "halstead_n2": [
+          41.0,
+          42.0
+        ],
+        "halstead_N1": [
+          65.0,
+          69.0
+        ],
+        "halstead_N2": [
+          70.0,
+          74.0
+        ],
+        "halstead_vol": [
+          780.48,
+          830.45
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -14,3 +14,3 @@",
+        " \t    match = name;",
+        "-\telse",
+        "+\telse if (rmp->regprog != NULL)",
+        " \t{"
+      ],
+      "margin": -0.001
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "unixcoder_full",
+      "project": "nagioscore",
+      "cwe": [
+        "CWE-476"
+      ],
+      "cve": "",
+      "commit": "b1a92a3b52d292ccb601e77a0b29cb1e67ac9d76",
+      "loc": 33,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0004,
+        "base_patched": 0.0005,
+        "thr_base": 0.04,
+        "bask_vuln": 0.0005,
+        "bask_patched": 0.0005,
+        "thr_bask": 0.12
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 16,
+      "kg_slots_patched": 16,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::qh_help",
+        "Variable::qh_help::sd",
+        "Variable::qh_help::buf",
+        "Function::nsock_printf_nul",
+        "Function::handler",
+        "Function::qh_find_handler",
+        "Function::nsock_printf",
+        "GLOBAL::ExternalAPI::strcmp",
+        "Type::query_handler",
+        "Function::nsock_strerror",
+        "Function::nsock_unix",
+        "Function::p"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "n_null_check": [
+          2.0,
+          3.0
+        ],
+        "halstead_N1": [
+          103.0,
+          102.0
+        ],
+        "halstead_N2": [
+          106.0,
+          107.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -4,3 +4,3 @@",
+        " ",
+        "-\tif (!*buf || !strcmp(buf, \"help\")) {",
+        "+\tif (buf == NULL || !strcmp(buf, \"help\")) {",
+        " \t\tnsock_printf_nul(sd,"
+      ],
+      "margin": -0.0
+    }
+  ]
+}

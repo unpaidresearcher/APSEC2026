@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "wall_s": 30690.187832131982,
+  "user_cpu_s": 37464.805146,
+  "sys_cpu_s": 240.623986,
+  "peak_rss_gb": 2.1794815063476562,
+  "n_projects_trained": 660,
+  "n_entities": 701959,
+  "n_triples": 4242015
+}

@@ -1,0 +1,4670 @@
+{
+  "all": {
+    "n": 224533,
+    "no_project_graph": 471,
+    "no_project_graph_pct": 0.2097687199654394,
+    "mean_real_slots": 18.607157967871093,
+    "median_real_slots": 19,
+    "buckets": {
+      "0": 647,
+      "1-7": 77545,
+      "8-15": 27844,
+      "16-31": 19022,
+      "32": 99475
+    }
+  },
+  "train_all": {
+    "n": 175797,
+    "no_project_graph": 323,
+    "no_project_graph_pct": 0.1837346484866067,
+    "mean_real_slots": 18.79630482886511,
+    "median_real_slots": 20,
+    "buckets": {
+      "0": 482,
+      "1-7": 59775,
+      "8-15": 21630,
+      "16-31": 14680,
+      "32": 79230
+    }
+  },
+  "train_vuln": {
+    "n": 4862,
+    "no_project_graph": 59,
+    "no_project_graph_pct": 1.2134923899629781,
+    "mean_real_slots": 26.018099547511312,
+    "median_real_slots": 32.0,
+    "buckets": {
+      "0": 59,
+      "1-7": 373,
+      "8-15": 549,
+      "16-31": 617,
+      "32": 3264
+    }
+  },
+  "train_benign": {
+    "n": 170935,
+    "no_project_graph": 264,
+    "no_project_graph_pct": 0.15444467195132652,
+    "mean_real_slots": 18.590891274461054,
+    "median_real_slots": 19,
+    "buckets": {
+      "0": 423,
+      "1-7": 59402,
+      "8-15": 21081,
+      "16-31": 14063,
+      "32": 75966
+    }
+  },
+  "valid_all": {
+    "n": 23948,
+    "no_project_graph": 79,
+    "no_project_graph_pct": 0.3298814097210623,
+    "mean_real_slots": 19.233338900952063,
+    "median_real_slots": 23.0,
+    "buckets": {
+      "0": 86,
+      "1-7": 7806,
+      "8-15": 2932,
+      "16-31": 1929,
+      "32": 11195
+    }
+  },
+  "valid_vuln": {
+    "n": 593,
+    "no_project_graph": 14,
+    "no_project_graph_pct": 2.360876897133221,
+    "mean_real_slots": 23.735244519392918,
+    "median_real_slots": 32,
+    "buckets": {
+      "0": 14,
+      "1-7": 61,
+      "8-15": 88,
+      "16-31": 98,
+      "32": 332
+    }
+  },
+  "valid_benign": {
+    "n": 23355,
+    "no_project_graph": 65,
+    "no_project_graph_pct": 0.2783129950760009,
+    "mean_real_slots": 19.119032327124813,
+    "median_real_slots": 23,
+    "buckets": {
+      "0": 72,
+      "1-7": 7745,
+      "8-15": 2844,
+      "16-31": 1831,
+      "32": 10863
+    }
+  },
+  "test_all": {
+    "n": 24788,
+    "no_project_graph": 69,
+    "no_project_graph_pct": 0.2783604970146845,
+    "mean_real_slots": 16.660763272551236,
+    "median_real_slots": 12.0,
+    "buckets": {
+      "0": 79,
+      "1-7": 9964,
+      "8-15": 3282,
+      "16-31": 2413,
+      "32": 9050
+    }
+  },
+  "test_vuln": {
+    "n": 549,
+    "no_project_graph": 10,
+    "no_project_graph_pct": 1.8214936247723132,
+    "mean_real_slots": 25.48816029143898,
+    "median_real_slots": 32,
+    "buckets": {
+      "0": 10,
+      "1-7": 46,
+      "8-15": 63,
+      "16-31": 78,
+      "32": 352
+    }
+  },
+  "test_benign": {
+    "n": 24239,
+    "no_project_graph": 59,
+    "no_project_graph_pct": 0.2434093815751475,
+    "mean_real_slots": 16.460827591897356,
+    "median_real_slots": 12,
+    "buckets": {
+      "0": 69,
+      "1-7": 9918,
+      "8-15": 3219,
+      "16-31": 2335,
+      "32": 8698
+    }
+  },
+  "per_project": {
+    "linux": {
+      "n": 53851,
+      "has_graph": 1,
+      "mean_real_slots": 29.677907559748196,
+      "n_vuln": 1152
+    },
+    "Chrome": {
+      "n": 18310,
+      "has_graph": 1,
+      "mean_real_slots": 8.717367558711087,
+      "n_vuln": 261
+    },
+    "qemu": {
+      "n": 5615,
+      "has_graph": 1,
+      "mean_real_slots": 19.292965271593946,
+      "n_vuln": 149
+    },
+    "gpac": {
+      "n": 5520,
+      "has_graph": 1,
+      "mean_real_slots": 5.731521739130435,
+      "n_vuln": 78
+    },
+    "ImageMagick": {
+      "n": 4845,
+      "has_graph": 1,
+      "mean_real_slots": 20.692879256965945,
+      "n_vuln": 359
+    },
+    "php-src": {
+      "n": 4701,
+      "has_graph": 1,
+      "mean_real_slots": 15.044671346522017,
+      "n_vuln": 181
+    },
+    "server": {
+      "n": 3804,
+      "has_graph": 1,
+      "mean_real_slots": 8.919295478443743,
+      "n_vuln": 19
+    },
+    "Android": {
+      "n": 3545,
+      "has_graph": 1,
+      "mean_real_slots": 21.20592383638928,
+      "n_vuln": 161
+    },
+    "linux-2_6": {
+      "n": 3370,
+      "has_graph": 1,
+      "mean_real_slots": 27.858160237388724,
+      "n_vuln": 100
+    },
+    "vim": {
+      "n": 3067,
+      "has_graph": 1,
+      "mean_real_slots": 10.494620149983698,
+      "n_vuln": 106
+    },
+    "tensorflow": {
+      "n": 3058,
+      "has_graph": 1,
+      "mean_real_slots": 14.470896010464356,
+      "n_vuln": 247
+    },
+    "radare2": {
+      "n": 2803,
+      "has_graph": 1,
+      "mean_real_slots": 10.765965037459864,
+      "n_vuln": 74
+    },
+    "CImg": {
+      "n": 2789,
+      "has_graph": 1,
+      "mean_real_slots": 8.4887056292578,
+      "n_vuln": 2
+    },
+    "FFmpeg": {
+      "n": 2461,
+      "has_graph": 1,
+      "mean_real_slots": 19.40349451442503,
+      "n_vuln": 89
+    },
+    "openssl": {
+      "n": 2017,
+      "has_graph": 1,
+      "mean_real_slots": 13.073872087258305,
+      "n_vuln": 120
+    },
+    "poppler": {
+      "n": 1798,
+      "has_graph": 1,
+      "mean_real_slots": 7.600111234705228,
+      "n_vuln": 33
+    },
+    "exiv2": {
+      "n": 1704,
+      "has_graph": 1,
+      "mean_real_slots": 11.8462441314554,
+      "n_vuln": 26
+    },
+    "mongo": {
+      "n": 1704,
+      "has_graph": 1,
+      "mean_real_slots": 8.435446009389672,
+      "n_vuln": 9
+    },
+    "hhvm": {
+      "n": 1649,
+      "has_graph": 1,
+      "mean_real_slots": 12.978775015160704,
+      "n_vuln": 29
+    },
+    "samba": {
+      "n": 1469,
+      "has_graph": 1,
+      "mean_real_slots": 27.6643975493533,
+      "n_vuln": 37
+    },
+    "FreeRDP": {
+      "n": 1360,
+      "has_graph": 1,
+      "mean_real_slots": 10.972794117647059,
+      "n_vuln": 44
+    },
+    "savannah": {
+      "n": 1297,
+      "has_graph": 1,
+      "mean_real_slots": 9.362374710871242,
+      "n_vuln": 61
+    },
+    "ovs": {
+      "n": 1282,
+      "has_graph": 1,
+      "mean_real_slots": 28.931357254290173,
+      "n_vuln": 5
+    },
+    "LibRaw": {
+      "n": 1170,
+      "has_graph": 1,
+      "mean_real_slots": 15.028205128205128,
+      "n_vuln": 21
+    },
+    "kvm": {
+      "n": 1169,
+      "has_graph": 1,
+      "mean_real_slots": 24.728828058169377,
+      "n_vuln": 3
+    },
+    "jsish": {
+      "n": 1110,
+      "has_graph": 1,
+      "mean_real_slots": 8.198198198198199,
+      "n_vuln": 2
+    },
+    "php": {
+      "n": 1109,
+      "has_graph": 1,
+      "mean_real_slots": 16.17493237150586,
+      "n_vuln": 38
+    },
+    "libarchive": {
+      "n": 1083,
+      "has_graph": 1,
+      "mean_real_slots": 25.2927054478301,
+      "n_vuln": 27
+    },
+    "mono": {
+      "n": 1064,
+      "has_graph": 1,
+      "mean_real_slots": 8.227443609022556,
+      "n_vuln": 5
+    },
+    "ImageMagick6": {
+      "n": 1061,
+      "has_graph": 1,
+      "mean_real_slots": 24.966069745523093,
+      "n_vuln": 97
+    },
+    "libxml2": {
+      "n": 1016,
+      "has_graph": 1,
+      "mean_real_slots": 9.893700787401574,
+      "n_vuln": 37
+    },
+    "sqlite": {
+      "n": 992,
+      "has_graph": 1,
+      "mean_real_slots": 10.58266129032258,
+      "n_vuln": 18
+    },
+    "xserver": {
+      "n": 940,
+      "has_graph": 1,
+      "mean_real_slots": 7.872340425531915,
+      "n_vuln": 21
+    },
+    "net": {
+      "n": 940,
+      "has_graph": 1,
+      "mean_real_slots": 27.613829787234042,
+      "n_vuln": 12
+    },
+    "oniguruma": {
+      "n": 914,
+      "has_graph": 1,
+      "mean_real_slots": 13.970459518599561,
+      "n_vuln": 20
+    },
+    "ruby": {
+      "n": 906,
+      "has_graph": 1,
+      "mean_real_slots": 11.484547461368653,
+      "n_vuln": 7
+    },
+    "tor": {
+      "n": 878,
+      "has_graph": 1,
+      "mean_real_slots": 28.505694760820045,
+      "n_vuln": 11
+    },
+    "ghostscript": {
+      "n": 860,
+      "has_graph": 1,
+      "mean_real_slots": 17.36279069767442,
+      "n_vuln": 31
+    },
+    "envoy": {
+      "n": 788,
+      "has_graph": 1,
+      "mean_real_slots": 8.300761421319796,
+      "n_vuln": 2
+    },
+    "curl": {
+      "n": 785,
+      "has_graph": 1,
+      "mean_real_slots": 25.950318471337578,
+      "n_vuln": 28
+    },
+    "postgres": {
+      "n": 747,
+      "has_graph": 1,
+      "mean_real_slots": 9.72289156626506,
+      "n_vuln": 11
+    },
+    "tip": {
+      "n": 743,
+      "has_graph": 1,
+      "mean_real_slots": 26.483176312247643,
+      "n_vuln": 7
+    },
+    "node": {
+      "n": 731,
+      "has_graph": 1,
+      "mean_real_slots": 11.633378932968537,
+      "n_vuln": 12
+    },
+    "wireshark": {
+      "n": 722,
+      "has_graph": 1,
+      "mean_real_slots": 23.26731301939058,
+      "n_vuln": 14
+    },
+    "jasper": {
+      "n": 712,
+      "has_graph": 1,
+      "mean_real_slots": 26.23876404494382,
+      "n_vuln": 43
+    },
+    "ghostpdl": {
+      "n": 706,
+      "has_graph": 1,
+      "mean_real_slots": 17.88101983002833,
+      "n_vuln": 29
+    },
+    "gnutls": {
+      "n": 698,
+      "has_graph": 1,
+      "mean_real_slots": 29.454154727793696,
+      "n_vuln": 25
+    },
+    "ceph": {
+      "n": 680,
+      "has_graph": 1,
+      "mean_real_slots": 14.239705882352942,
+      "n_vuln": 19
+    },
+    "haproxy": {
+      "n": 678,
+      "has_graph": 1,
+      "mean_real_slots": 27.053097345132745,
+      "n_vuln": 11
+    },
+    "git": {
+      "n": 668,
+      "has_graph": 1,
+      "mean_real_slots": 21.25,
+      "n_vuln": 16
+    },
+    "systemd": {
+      "n": 664,
+      "has_graph": 1,
+      "mean_real_slots": 17.272590361445783,
+      "n_vuln": 16
+    },
+    "openjpeg": {
+      "n": 657,
+      "has_graph": 1,
+      "mean_real_slots": 26.590563165905632,
+      "n_vuln": 36
+    },
+    "krb5": {
+      "n": 655,
+      "has_graph": 1,
+      "mean_real_slots": 20.625954198473284,
+      "n_vuln": 29
+    },
+    "spice": {
+      "n": 649,
+      "has_graph": 1,
+      "mean_real_slots": 13.323574730354391,
+      "n_vuln": 5
+    },
+    "libvirt": {
+      "n": 649,
+      "has_graph": 1,
+      "mean_real_slots": 14.445300462249614,
+      "n_vuln": 6
+    },
+    "OpenSC": {
+      "n": 633,
+      "has_graph": 1,
+      "mean_real_slots": 27.03791469194313,
+      "n_vuln": 20
+    },
+    "tcpdump": {
+      "n": 632,
+      "has_graph": 1,
+      "mean_real_slots": 23.21993670886076,
+      "n_vuln": 100
+    },
+    "bind9": {
+      "n": 622,
+      "has_graph": 1,
+      "mean_real_slots": 31.088424437299036,
+      "n_vuln": 5
+    },
+    "libtiff": {
+      "n": 615,
+      "has_graph": 1,
+      "mean_real_slots": 15.504065040650406,
+      "n_vuln": 30
+    },
+    "mruby": {
+      "n": 605,
+      "has_graph": 1,
+      "mean_real_slots": 20.411570247933884,
+      "n_vuln": 26
+    },
+    "linux-stable": {
+      "n": 604,
+      "has_graph": 1,
+      "mean_real_slots": 25.428807947019866,
+      "n_vuln": 3
+    },
+    "Little-CMS": {
+      "n": 564,
+      "has_graph": 1,
+      "mean_real_slots": 13.96808510638298,
+      "n_vuln": 5
+    },
+    "cpython": {
+      "n": 551,
+      "has_graph": 1,
+      "mean_real_slots": 18.012704174228674,
+      "n_vuln": 6
+    },
+    "cyrus-imapd": {
+      "n": 541,
+      "has_graph": 1,
+      "mean_real_slots": 27.175600739371536,
+      "n_vuln": 5
+    },
+    "exim": {
+      "n": 518,
+      "has_graph": 1,
+      "mean_real_slots": 13.023166023166024,
+      "n_vuln": 15
+    },
+    "httpd": {
+      "n": 517,
+      "has_graph": 1,
+      "mean_real_slots": 15.502901353965184,
+      "n_vuln": 8
+    },
+    "libgit2": {
+      "n": 494,
+      "has_graph": 1,
+      "mean_real_slots": 16.676113360323885,
+      "n_vuln": 15
+    },
+    "frr": {
+      "n": 469,
+      "has_graph": 1,
+      "mean_real_slots": 13.663113006396589,
+      "n_vuln": 2
+    },
+    "ncurses": {
+      "n": 455,
+      "has_graph": 1,
+      "mean_real_slots": 10.978021978021978,
+      "n_vuln": 2
+    },
+    "redis": {
+      "n": 454,
+      "has_graph": 1,
+      "mean_real_slots": 14.658590308370044,
+      "n_vuln": 14
+    },
+    "icu": {
+      "n": 451,
+      "has_graph": 1,
+      "mean_real_slots": 14.93569844789357,
+      "n_vuln": 2
+    },
+    "libexpat": {
+      "n": 416,
+      "has_graph": 1,
+      "mean_real_slots": 6.242788461538462,
+      "n_vuln": 8
+    },
+    "fmt": {
+      "n": 412,
+      "has_graph": 1,
+      "mean_real_slots": 5.0,
+      "n_vuln": 1
+    },
+    "bash": {
+      "n": 407,
+      "has_graph": 1,
+      "mean_real_slots": 13.164619164619165,
+      "n_vuln": 2
+    },
+    "liblouis": {
+      "n": 396,
+      "has_graph": 1,
+      "mean_real_slots": 7.603535353535354,
+      "n_vuln": 7
+    },
+    "rdesktop": {
+      "n": 389,
+      "has_graph": 1,
+      "mean_real_slots": 13.15681233933162,
+      "n_vuln": 11
+    },
+    "weechat": {
+      "n": 388,
+      "has_graph": 1,
+      "mean_real_slots": 24.463917525773194,
+      "n_vuln": 6
+    },
+    "cpp-peglib": {
+      "n": 387,
+      "has_graph": 1,
+      "mean_real_slots": 5.728682170542636,
+      "n_vuln": 2
+    },
+    "libevent": {
+      "n": 386,
+      "has_graph": 1,
+      "mean_real_slots": 27.22538860103627,
+      "n_vuln": 7
+    },
+    "typed_ast": {
+      "n": 381,
+      "has_graph": 1,
+      "mean_real_slots": 18.146981627296586,
+      "n_vuln": 4
+    },
+    "openssh-portable": {
+      "n": 373,
+      "has_graph": 1,
+      "mean_real_slots": 16.037533512064343,
+      "n_vuln": 7
+    },
+    "libyang": {
+      "n": 373,
+      "has_graph": 1,
+      "mean_real_slots": 28.455764075067023,
+      "n_vuln": 11
+    },
+    "src": {
+      "n": 371,
+      "has_graph": 1,
+      "mean_real_slots": 27.956873315363882,
+      "n_vuln": 10
+    },
+    "mysql-server": {
+      "n": 366,
+      "has_graph": 1,
+      "mean_real_slots": 13.915300546448087,
+      "n_vuln": 5
+    },
+    "date": {
+      "n": 366,
+      "has_graph": 1,
+      "mean_real_slots": 7.939890710382514,
+      "n_vuln": 0
+    },
+    "w3m": {
+      "n": 361,
+      "has_graph": 1,
+      "mean_real_slots": 14.664819944598339,
+      "n_vuln": 28
+    },
+    "libgd": {
+      "n": 353,
+      "has_graph": 1,
+      "mean_real_slots": 11.6657223796034,
+      "n_vuln": 20
+    },
+    "rsyslog": {
+      "n": 349,
+      "has_graph": 1,
+      "mean_real_slots": 18.32378223495702,
+      "n_vuln": 6
+    },
+    "dbus": {
+      "n": 348,
+      "has_graph": 1,
+      "mean_real_slots": 12.933908045977011,
+      "n_vuln": 6
+    },
+    "audiofile": {
+      "n": 348,
+      "has_graph": 1,
+      "mean_real_slots": 6.890804597701149,
+      "n_vuln": 3
+    },
+    "glib": {
+      "n": 344,
+      "has_graph": 1,
+      "mean_real_slots": 7.188953488372093,
+      "n_vuln": 4
+    },
+    "njs": {
+      "n": 342,
+      "has_graph": 1,
+      "mean_real_slots": 30.269005847953217,
+      "n_vuln": 12
+    },
+    "virglrenderer": {
+      "n": 330,
+      "has_graph": 1,
+      "mean_real_slots": 25.506060606060608,
+      "n_vuln": 14
+    },
+    "mbedtls": {
+      "n": 324,
+      "has_graph": 1,
+      "mean_real_slots": 20.77469135802469,
+      "n_vuln": 9
+    },
+    "libsass": {
+      "n": 322,
+      "has_graph": 1,
+      "mean_real_slots": 12.369565217391305,
+      "n_vuln": 8
+    },
+    "nDPI": {
+      "n": 311,
+      "has_graph": 1,
+      "mean_real_slots": 24.675241157556272,
+      "n_vuln": 9
+    },
+    "unicorn": {
+      "n": 308,
+      "has_graph": 1,
+      "mean_real_slots": 15.564935064935066,
+      "n_vuln": 3
+    },
+    "libvpx": {
+      "n": 304,
+      "has_graph": 1,
+      "mean_real_slots": 7.1381578947368425,
+      "n_vuln": 4
+    },
+    "flatpak": {
+      "n": 301,
+      "has_graph": 1,
+      "mean_real_slots": 15.172757475083056,
+      "n_vuln": 20
+    },
+    "mongoose": {
+      "n": 298,
+      "has_graph": 1,
+      "mean_real_slots": 18.550335570469798,
+      "n_vuln": 1
+    },
+    "mupdf": {
+      "n": 297,
+      "has_graph": 1,
+      "mean_real_slots": 6.909090909090909,
+      "n_vuln": 2
+    },
+    "clamav-devel": {
+      "n": 292,
+      "has_graph": 1,
+      "mean_real_slots": 23.61986301369863,
+      "n_vuln": 12
+    },
+    "perl5": {
+      "n": 291,
+      "has_graph": 1,
+      "mean_real_slots": 16.756013745704468,
+      "n_vuln": 7
+    },
+    "elog": {
+      "n": 289,
+      "has_graph": 1,
+      "mean_real_slots": 13.993079584775087,
+      "n_vuln": 1
+    },
+    "evolution-data-server": {
+      "n": 288,
+      "has_graph": 1,
+      "mean_real_slots": 14.42013888888889,
+      "n_vuln": 3
+    },
+    "libsndfile": {
+      "n": 285,
+      "has_graph": 1,
+      "mean_real_slots": 13.610526315789473,
+      "n_vuln": 10
+    },
+    "Onigmo": {
+      "n": 285,
+      "has_graph": 1,
+      "mean_real_slots": 9.715789473684211,
+      "n_vuln": 1
+    },
+    "udisks": {
+      "n": 281,
+      "has_graph": 1,
+      "mean_real_slots": 10.665480427046264,
+      "n_vuln": 2
+    },
+    "bluez": {
+      "n": 280,
+      "has_graph": 1,
+      "mean_real_slots": 26.039285714285715,
+      "n_vuln": 2
+    },
+    "pjproject": {
+      "n": 280,
+      "has_graph": 1,
+      "mean_real_slots": 25.267857142857142,
+      "n_vuln": 10
+    },
+    "gnupg": {
+      "n": 277,
+      "has_graph": 1,
+      "mean_real_slots": 25.256317689530686,
+      "n_vuln": 12
+    },
+    "file": {
+      "n": 277,
+      "has_graph": 1,
+      "mean_real_slots": 24.978339350180505,
+      "n_vuln": 25
+    },
+    "ntopng": {
+      "n": 277,
+      "has_graph": 1,
+      "mean_real_slots": 16.263537906137184,
+      "n_vuln": 3
+    },
+    "libvncserver": {
+      "n": 276,
+      "has_graph": 1,
+      "mean_real_slots": 16.217391304347824,
+      "n_vuln": 24
+    },
+    "gst-plugins-good": {
+      "n": 274,
+      "has_graph": 1,
+      "mean_real_slots": 12.861313868613138,
+      "n_vuln": 5
+    },
+    "libjpeg-turbo": {
+      "n": 269,
+      "has_graph": 1,
+      "mean_real_slots": 11.557620817843866,
+      "n_vuln": 7
+    },
+    "mongo-c-driver-legacy": {
+      "n": 267,
+      "has_graph": 1,
+      "mean_real_slots": 12.172284644194757,
+      "n_vuln": 1
+    },
+    "lua": {
+      "n": 262,
+      "has_graph": 1,
+      "mean_real_slots": 8.114503816793894,
+      "n_vuln": 7
+    },
+    "Bento4": {
+      "n": 255,
+      "has_graph": 1,
+      "mean_real_slots": 5.901960784313726,
+      "n_vuln": 12
+    },
+    "openexr": {
+      "n": 249,
+      "has_graph": 1,
+      "mean_real_slots": 13.008032128514056,
+      "n_vuln": 17
+    },
+    "Espruino": {
+      "n": 248,
+      "has_graph": 1,
+      "mean_real_slots": 10.17741935483871,
+      "n_vuln": 6
+    },
+    "leptonica": {
+      "n": 248,
+      "has_graph": 1,
+      "mean_real_slots": 13.786290322580646,
+      "n_vuln": 8
+    },
+    "mujs": {
+      "n": 247,
+      "has_graph": 1,
+      "mean_real_slots": 5.647773279352227,
+      "n_vuln": 4
+    },
+    "openldap": {
+      "n": 246,
+      "has_graph": 1,
+      "mean_real_slots": 20.589430894308943,
+      "n_vuln": 18
+    },
+    "ChakraCore": {
+      "n": 246,
+      "has_graph": 1,
+      "mean_real_slots": 10.58130081300813,
+      "n_vuln": 1
+    },
+    "quagga": {
+      "n": 245,
+      "has_graph": 1,
+      "mean_real_slots": 25.59591836734694,
+      "n_vuln": 3
+    },
+    "memcached": {
+      "n": 243,
+      "has_graph": 1,
+      "mean_real_slots": 18.506172839506174,
+      "n_vuln": 3
+    },
+    "unbound": {
+      "n": 240,
+      "has_graph": 1,
+      "mean_real_slots": 25.9125,
+      "n_vuln": 10
+    },
+    "sound": {
+      "n": 239,
+      "has_graph": 1,
+      "mean_real_slots": 28.99581589958159,
+      "n_vuln": 2
+    },
+    "Pillow": {
+      "n": 238,
+      "has_graph": 1,
+      "mean_real_slots": 10.008403361344538,
+      "n_vuln": 19
+    },
+    "asylo": {
+      "n": 234,
+      "has_graph": 1,
+      "mean_real_slots": 23.423076923076923,
+      "n_vuln": 15
+    },
+    "stb": {
+      "n": 231,
+      "has_graph": 1,
+      "mean_real_slots": 8.87012987012987,
+      "n_vuln": 5
+    },
+    "libssh": {
+      "n": 230,
+      "has_graph": 1,
+      "mean_real_slots": 12.982608695652173,
+      "n_vuln": 6
+    },
+    "neomutt": {
+      "n": 228,
+      "has_graph": 1,
+      "mean_real_slots": 27.162280701754387,
+      "n_vuln": 13
+    },
+    "jdk11u-dev": {
+      "n": 226,
+      "has_graph": 1,
+      "mean_real_slots": 10.269911504424778,
+      "n_vuln": 0
+    },
+    "dpdk": {
+      "n": 224,
+      "has_graph": 1,
+      "mean_real_slots": 27.691964285714285,
+      "n_vuln": 9
+    },
+    "ntp": {
+      "n": 223,
+      "has_graph": 1,
+      "mean_real_slots": 18.071748878923767,
+      "n_vuln": 12
+    },
+    "nasm": {
+      "n": 223,
+      "has_graph": 1,
+      "mean_real_slots": 12.174887892376681,
+      "n_vuln": 2
+    },
+    "gimp": {
+      "n": 222,
+      "has_graph": 1,
+      "mean_real_slots": 14.108108108108109,
+      "n_vuln": 15
+    },
+    "file-roller": {
+      "n": 221,
+      "has_graph": 1,
+      "mean_real_slots": 9.95475113122172,
+      "n_vuln": 5
+    },
+    "gst-plugins-base": {
+      "n": 220,
+      "has_graph": 1,
+      "mean_real_slots": 8.877272727272727,
+      "n_vuln": 4
+    },
+    "libpng": {
+      "n": 218,
+      "has_graph": 1,
+      "mean_real_slots": 12.706422018348624,
+      "n_vuln": 7
+    },
+    "rizin": {
+      "n": 216,
+      "has_graph": 1,
+      "mean_real_slots": 14.222222222222221,
+      "n_vuln": 6
+    },
+    "binaryen": {
+      "n": 216,
+      "has_graph": 1,
+      "mean_real_slots": 17.48148148148148,
+      "n_vuln": 0
+    },
+    "pacemaker": {
+      "n": 213,
+      "has_graph": 1,
+      "mean_real_slots": 18.7981220657277,
+      "n_vuln": 2
+    },
+    "util-linux": {
+      "n": 213,
+      "has_graph": 1,
+      "mean_real_slots": 22.600938967136152,
+      "n_vuln": 7
+    },
+    "mutt": {
+      "n": 212,
+      "has_graph": 1,
+      "mean_real_slots": 16.443396226415093,
+      "n_vuln": 11
+    },
+    "squid": {
+      "n": 209,
+      "has_graph": 1,
+      "mean_real_slots": 12.382775119617225,
+      "n_vuln": 7
+    },
+    "znc": {
+      "n": 206,
+      "has_graph": 1,
+      "mean_real_slots": 9.611650485436893,
+      "n_vuln": 5
+    },
+    "vlc": {
+      "n": 205,
+      "has_graph": 1,
+      "mean_real_slots": 28.73170731707317,
+      "n_vuln": 4
+    },
+    "core": {
+      "n": 205,
+      "has_graph": 1,
+      "mean_real_slots": 27.6,
+      "n_vuln": 15
+    },
+    "teeworlds": {
+      "n": 204,
+      "has_graph": 1,
+      "mean_real_slots": 7.421568627450981,
+      "n_vuln": 3
+    },
+    "wget": {
+      "n": 202,
+      "has_graph": 1,
+      "mean_real_slots": 17.163366336633665,
+      "n_vuln": 9
+    },
+    "fontforge": {
+      "n": 201,
+      "has_graph": 1,
+      "mean_real_slots": 15.218905472636816,
+      "n_vuln": 1
+    },
+    "tinyexr": {
+      "n": 200,
+      "has_graph": 1,
+      "mean_real_slots": 15.88,
+      "n_vuln": 1
+    },
+    "libass": {
+      "n": 199,
+      "has_graph": 1,
+      "mean_real_slots": 12.93969849246231,
+      "n_vuln": 4
+    },
+    "chrony": {
+      "n": 199,
+      "has_graph": 1,
+      "mean_real_slots": 8.557788944723619,
+      "n_vuln": 2
+    },
+    "lxc": {
+      "n": 198,
+      "has_graph": 1,
+      "mean_real_slots": 15.545454545454545,
+      "n_vuln": 4
+    },
+    "thrift": {
+      "n": 195,
+      "has_graph": 1,
+      "mean_real_slots": 12.02051282051282,
+      "n_vuln": 2
+    },
+    "connman": {
+      "n": 195,
+      "has_graph": 1,
+      "mean_real_slots": 17.57948717948718,
+      "n_vuln": 1
+    },
+    "qpdf": {
+      "n": 193,
+      "has_graph": 1,
+      "mean_real_slots": 8.544041450777202,
+      "n_vuln": 11
+    },
+    "libming": {
+      "n": 191,
+      "has_graph": 1,
+      "mean_real_slots": 11.811518324607329,
+      "n_vuln": 3
+    },
+    "nghttp2": {
+      "n": 191,
+      "has_graph": 1,
+      "mean_real_slots": 17.308900523560208,
+      "n_vuln": 1
+    },
+    "mod_wsgi": {
+      "n": 191,
+      "has_graph": 1,
+      "mean_real_slots": 15.424083769633508,
+      "n_vuln": 3
+    },
+    "mindrot": {
+      "n": 188,
+      "has_graph": 1,
+      "mean_real_slots": 21.680851063829788,
+      "n_vuln": 3
+    },
+    "libheif": {
+      "n": 187,
+      "has_graph": 1,
+      "mean_real_slots": 11.203208556149733,
+      "n_vuln": 3
+    },
+    "rawstudio": {
+      "n": 183,
+      "has_graph": 1,
+      "mean_real_slots": 11.076502732240437,
+      "n_vuln": 2
+    },
+    "dcmtk": {
+      "n": 182,
+      "has_graph": 1,
+      "mean_real_slots": 10.516483516483516,
+      "n_vuln": 9
+    },
+    "nf": {
+      "n": 182,
+      "has_graph": 1,
+      "mean_real_slots": 26.04945054945055,
+      "n_vuln": 1
+    },
+    "libxslt": {
+      "n": 180,
+      "has_graph": 1,
+      "mean_real_slots": 11.216666666666667,
+      "n_vuln": 4
+    },
+    "ZRTPCPP": {
+      "n": 180,
+      "has_graph": 1,
+      "mean_real_slots": 11.233333333333333,
+      "n_vuln": 1
+    },
+    "mvfst": {
+      "n": 177,
+      "has_graph": 1,
+      "mean_real_slots": 14.141242937853107,
+      "n_vuln": 1
+    },
+    "soundtouch": {
+      "n": 174,
+      "has_graph": 1,
+      "mean_real_slots": 4.385057471264368,
+      "n_vuln": 10
+    },
+    "vte": {
+      "n": 174,
+      "has_graph": 1,
+      "mean_real_slots": 6.793103448275862,
+      "n_vuln": 0
+    },
+    "pure-ftpd": {
+      "n": 173,
+      "has_graph": 1,
+      "mean_real_slots": 14.491329479768787,
+      "n_vuln": 4
+    },
+    "suricata": {
+      "n": 171,
+      "has_graph": 1,
+      "mean_real_slots": 20.292397660818715,
+      "n_vuln": 7
+    },
+    "libsolv": {
+      "n": 171,
+      "has_graph": 1,
+      "mean_real_slots": 7.631578947368421,
+      "n_vuln": 2
+    },
+    "yara": {
+      "n": 170,
+      "has_graph": 1,
+      "mean_real_slots": 14.823529411764707,
+      "n_vuln": 8
+    },
+    "opencv": {
+      "n": 169,
+      "has_graph": 1,
+      "mean_real_slots": 8.85207100591716,
+      "n_vuln": 6
+    },
+    "ntfs-3g": {
+      "n": 169,
+      "has_graph": 1,
+      "mean_real_slots": 23.159763313609467,
+      "n_vuln": 0
+    },
+    "openvpn": {
+      "n": 167,
+      "has_graph": 1,
+      "mean_real_slots": 19.98802395209581,
+      "n_vuln": 3
+    },
+    "rpm": {
+      "n": 166,
+      "has_graph": 1,
+      "mean_real_slots": 15.596385542168674,
+      "n_vuln": 3
+    },
+    "gstreamer": {
+      "n": 161,
+      "has_graph": 1,
+      "mean_real_slots": 9.633540372670808,
+      "n_vuln": 3
+    },
+    "wireless": {
+      "n": 161,
+      "has_graph": 1,
+      "mean_real_slots": 21.043478260869566,
+      "n_vuln": 1
+    },
+    "jdk17u": {
+      "n": 161,
+      "has_graph": 1,
+      "mean_real_slots": 12.397515527950311,
+      "n_vuln": 0
+    },
+    "hermes": {
+      "n": 160,
+      "has_graph": 1,
+      "mean_real_slots": 14.425,
+      "n_vuln": 6
+    },
+    "openmpt": {
+      "n": 158,
+      "has_graph": 1,
+      "mean_real_slots": 8.917721518987342,
+      "n_vuln": 4
+    },
+    "sysstat": {
+      "n": 158,
+      "has_graph": 1,
+      "mean_real_slots": 20.411392405063292,
+      "n_vuln": 3
+    },
+    "claws": {
+      "n": 158,
+      "has_graph": 1,
+      "mean_real_slots": 9.449367088607595,
+      "n_vuln": 5
+    },
+    "hexchat": {
+      "n": 157,
+      "has_graph": 1,
+      "mean_real_slots": 12.910828025477707,
+      "n_vuln": 3
+    },
+    "proxygen": {
+      "n": 157,
+      "has_graph": 1,
+      "mean_real_slots": 16.929936305732483,
+      "n_vuln": 1
+    },
+    "iperf": {
+      "n": 156,
+      "has_graph": 1,
+      "mean_real_slots": 20.602564102564102,
+      "n_vuln": 1
+    },
+    "wesnoth": {
+      "n": 156,
+      "has_graph": 1,
+      "mean_real_slots": 7.461538461538462,
+      "n_vuln": 5
+    },
+    "miniupnp": {
+      "n": 155,
+      "has_graph": 1,
+      "mean_real_slots": 19.44516129032258,
+      "n_vuln": 11
+    },
+    "gcc": {
+      "n": 155,
+      "has_graph": 1,
+      "mean_real_slots": 14.380645161290323,
+      "n_vuln": 0
+    },
+    "minisphere": {
+      "n": 153,
+      "has_graph": 1,
+      "mean_real_slots": 22.098039215686274,
+      "n_vuln": 1
+    },
+    "heimdal": {
+      "n": 151,
+      "has_graph": 1,
+      "mean_real_slots": 19.66887417218543,
+      "n_vuln": 4
+    },
+    "gdk-pixbuf": {
+      "n": 151,
+      "has_graph": 1,
+      "mean_real_slots": 11.735099337748345,
+      "n_vuln": 6
+    },
+    "collectd": {
+      "n": 150,
+      "has_graph": 1,
+      "mean_real_slots": 26.586666666666666,
+      "n_vuln": 3
+    },
+    "libde265": {
+      "n": 150,
+      "has_graph": 1,
+      "mean_real_slots": 12.513333333333334,
+      "n_vuln": 0
+    },
+    "gnuplot": {
+      "n": 149,
+      "has_graph": 1,
+      "mean_real_slots": 9.973154362416107,
+      "n_vuln": 2
+    },
+    "openj9": {
+      "n": 148,
+      "has_graph": 1,
+      "mean_real_slots": 10.952702702702704,
+      "n_vuln": 2
+    },
+    "passenger": {
+      "n": 147,
+      "has_graph": 1,
+      "mean_real_slots": 11.870748299319727,
+      "n_vuln": 4
+    },
+    "upx": {
+      "n": 144,
+      "has_graph": 1,
+      "mean_real_slots": 16.48611111111111,
+      "n_vuln": 9
+    },
+    "xterm-snapshots": {
+      "n": 141,
+      "has_graph": 1,
+      "mean_real_slots": 9.425531914893616,
+      "n_vuln": 1
+    },
+    "acrn-hypervisor": {
+      "n": 140,
+      "has_graph": 1,
+      "mean_real_slots": 24.457142857142856,
+      "n_vuln": 3
+    },
+    "polarssl": {
+      "n": 139,
+      "has_graph": 1,
+      "mean_real_slots": 13.597122302158274,
+      "n_vuln": 5
+    },
+    "cJSON": {
+      "n": 139,
+      "has_graph": 1,
+      "mean_real_slots": 7.9928057553956835,
+      "n_vuln": 2
+    },
+    "nanopb": {
+      "n": 139,
+      "has_graph": 1,
+      "mean_real_slots": 25.87769784172662,
+      "n_vuln": 5
+    },
+    "harfbuzz": {
+      "n": 136,
+      "has_graph": 1,
+      "mean_real_slots": 9.661764705882353,
+      "n_vuln": 2
+    },
+    "slurm": {
+      "n": 136,
+      "has_graph": 1,
+      "mean_real_slots": 26.389705882352942,
+      "n_vuln": 2
+    },
+    "WavPack": {
+      "n": 135,
+      "has_graph": 1,
+      "mean_real_slots": 20.16296296296296,
+      "n_vuln": 17
+    },
+    "pesign": {
+      "n": 135,
+      "has_graph": 1,
+      "mean_real_slots": 14.037037037037036,
+      "n_vuln": 0
+    },
+    "NetworkManager": {
+      "n": 134,
+      "has_graph": 1,
+      "mean_real_slots": 9.835820895522389,
+      "n_vuln": 2
+    },
+    "taglib": {
+      "n": 133,
+      "has_graph": 1,
+      "mean_real_slots": 4.180451127819549,
+      "n_vuln": 4
+    },
+    "binutils-gdb": {
+      "n": 133,
+      "has_graph": 1,
+      "mean_real_slots": 16.954887218045112,
+      "n_vuln": 0
+    },
+    "libtorrent": {
+      "n": 131,
+      "has_graph": 1,
+      "mean_real_slots": 14.80916030534351,
+      "n_vuln": 2
+    },
+    "net-next": {
+      "n": 131,
+      "has_graph": 1,
+      "mean_real_slots": 24.15267175572519,
+      "n_vuln": 1
+    },
+    "pcre2": {
+      "n": 131,
+      "has_graph": 1,
+      "mean_real_slots": 20.931297709923665,
+      "n_vuln": 3
+    },
+    "gerbv": {
+      "n": 131,
+      "has_graph": 1,
+      "mean_real_slots": 16.427480916030536,
+      "n_vuln": 1
+    },
+    "freeradius-server": {
+      "n": 129,
+      "has_graph": 1,
+      "mean_real_slots": 19.2015503875969,
+      "n_vuln": 7
+    },
+    "bpf": {
+      "n": 129,
+      "has_graph": 1,
+      "mean_real_slots": 25.6046511627907,
+      "n_vuln": 4
+    },
+    "xdelta-devel": {
+      "n": 129,
+      "has_graph": 1,
+      "mean_real_slots": 15.906976744186046,
+      "n_vuln": 1
+    },
+    "xorg-xserver": {
+      "n": 129,
+      "has_graph": 1,
+      "mean_real_slots": 9.37984496124031,
+      "n_vuln": 0
+    },
+    "domoticz": {
+      "n": 128,
+      "has_graph": 1,
+      "mean_real_slots": 12.0078125,
+      "n_vuln": 1
+    },
+    "aircrack-ng": {
+      "n": 128,
+      "has_graph": 1,
+      "mean_real_slots": 16.234375,
+      "n_vuln": 4
+    },
+    "qcad": {
+      "n": 128,
+      "has_graph": 1,
+      "mean_real_slots": 5.8359375,
+      "n_vuln": 1
+    },
+    "wildmidi": {
+      "n": 127,
+      "has_graph": 1,
+      "mean_real_slots": 26.433070866141733,
+      "n_vuln": 2
+    },
+    "inspircd": {
+      "n": 126,
+      "has_graph": 1,
+      "mean_real_slots": 6.412698412698413,
+      "n_vuln": 4
+    },
+    "mariadb-connector-c": {
+      "n": 126,
+      "has_graph": 1,
+      "mean_real_slots": 8.579365079365079,
+      "n_vuln": 1
+    },
+    "mod_auth_openidc": {
+      "n": 125,
+      "has_graph": 1,
+      "mean_real_slots": 27.432,
+      "n_vuln": 4
+    },
+    "mongo-c-driver": {
+      "n": 124,
+      "has_graph": 1,
+      "mean_real_slots": 31.64516129032258,
+      "n_vuln": 1
+    },
+    "libxkbcommon": {
+      "n": 124,
+      "has_graph": 1,
+      "mean_real_slots": 13.629032258064516,
+      "n_vuln": 9
+    },
+    "htslib": {
+      "n": 123,
+      "has_graph": 1,
+      "mean_real_slots": 22.642276422764226,
+      "n_vuln": 1
+    },
+    "glewlwyd": {
+      "n": 123,
+      "has_graph": 1,
+      "mean_real_slots": 31.959349593495936,
+      "n_vuln": 2
+    },
+    "flac": {
+      "n": 122,
+      "has_graph": 1,
+      "mean_real_slots": 19.852459016393443,
+      "n_vuln": 4
+    },
+    "net-snmp": {
+      "n": 121,
+      "has_graph": 1,
+      "mean_real_slots": 14.165289256198347,
+      "n_vuln": 1
+    },
+    "libsoup": {
+      "n": 121,
+      "has_graph": 1,
+      "mean_real_slots": 8.165289256198347,
+      "n_vuln": 4
+    },
+    "cgit": {
+      "n": 121,
+      "has_graph": 1,
+      "mean_real_slots": 14.198347107438016,
+      "n_vuln": 1
+    },
+    "ipsec": {
+      "n": 121,
+      "has_graph": 1,
+      "mean_real_slots": 26.041322314049587,
+      "n_vuln": 1
+    },
+    "sgminer": {
+      "n": 120,
+      "has_graph": 1,
+      "mean_real_slots": 14.733333333333333,
+      "n_vuln": 2
+    },
+    "librsvg": {
+      "n": 120,
+      "has_graph": 1,
+      "mean_real_slots": 14.683333333333334,
+      "n_vuln": 3
+    },
+    "neovim": {
+      "n": 119,
+      "has_graph": 1,
+      "mean_real_slots": 9.420168067226891,
+      "n_vuln": 1
+    },
+    "md4c": {
+      "n": 117,
+      "has_graph": 1,
+      "mean_real_slots": 8.094017094017094,
+      "n_vuln": 1
+    },
+    "libx11": {
+      "n": 116,
+      "has_graph": 1,
+      "mean_real_slots": 10.03448275862069,
+      "n_vuln": 8
+    },
+    "ok-file-formats": {
+      "n": 115,
+      "has_graph": 1,
+      "mean_real_slots": 21.565217391304348,
+      "n_vuln": 0
+    },
+    "cryptopp": {
+      "n": 114,
+      "has_graph": 1,
+      "mean_real_slots": 9.456140350877194,
+      "n_vuln": 2
+    },
+    "graphviz": {
+      "n": 114,
+      "has_graph": 1,
+      "mean_real_slots": 11.798245614035087,
+      "n_vuln": 2
+    },
+    "matio": {
+      "n": 113,
+      "has_graph": 1,
+      "mean_real_slots": 23.52212389380531,
+      "n_vuln": 4
+    },
+    "v4l2loopback": {
+      "n": 113,
+      "has_graph": 1,
+      "mean_real_slots": 23.345132743362832,
+      "n_vuln": 1
+    },
+    "uzbl": {
+      "n": 112,
+      "has_graph": 1,
+      "mean_real_slots": 10.767857142857142,
+      "n_vuln": 1
+    },
+    "jerryscript": {
+      "n": 112,
+      "has_graph": 1,
+      "mean_real_slots": 31.830357142857142,
+      "n_vuln": 3
+    },
+    "libetpan": {
+      "n": 111,
+      "has_graph": 1,
+      "mean_real_slots": 29.882882882882882,
+      "n_vuln": 1
+    },
+    "tty": {
+      "n": 110,
+      "has_graph": 1,
+      "mean_real_slots": 18.427272727272726,
+      "n_vuln": 3
+    },
+    "sleuthkit": {
+      "n": 109,
+      "has_graph": 1,
+      "mean_real_slots": 18.743119266055047,
+      "n_vuln": 3
+    },
+    "PackageKit": {
+      "n": 109,
+      "has_graph": 1,
+      "mean_real_slots": 12.65137614678899,
+      "n_vuln": 1
+    },
+    "busybox": {
+      "n": 108,
+      "has_graph": 1,
+      "mean_real_slots": 19.694444444444443,
+      "n_vuln": 6
+    },
+    "kde": {
+      "n": 108,
+      "has_graph": 1,
+      "mean_real_slots": 11.24074074074074,
+      "n_vuln": 5
+    },
+    "cinnamon-screensaver": {
+      "n": 107,
+      "has_graph": 1,
+      "mean_real_slots": 7.4672897196261685,
+      "n_vuln": 1
+    },
+    "lighttpd1_4": {
+      "n": 106,
+      "has_graph": 1,
+      "mean_real_slots": 21.452830188679247,
+      "n_vuln": 2
+    },
+    "fbthrift": {
+      "n": 106,
+      "has_graph": 1,
+      "mean_real_slots": 6.377358490566038,
+      "n_vuln": 2
+    },
+    "gst-plugins-bad": {
+      "n": 104,
+      "has_graph": 1,
+      "mean_real_slots": 6.769230769230769,
+      "n_vuln": 3
+    },
+    "libconfuse": {
+      "n": 103,
+      "has_graph": 1,
+      "mean_real_slots": 24.650485436893202,
+      "n_vuln": 0
+    },
+    "nbd": {
+      "n": 102,
+      "has_graph": 1,
+      "mean_real_slots": 20.215686274509803,
+      "n_vuln": 3
+    },
+    "media_tree": {
+      "n": 102,
+      "has_graph": 1,
+      "mean_real_slots": 28.95098039215686,
+      "n_vuln": 3
+    },
+    "cpio": {
+      "n": 102,
+      "has_graph": 1,
+      "mean_real_slots": 15.166666666666666,
+      "n_vuln": 1
+    },
+    "redcarpet": {
+      "n": 101,
+      "has_graph": 1,
+      "mean_real_slots": 16.465346534653467,
+      "n_vuln": 1
+    },
+    "tartarus": {
+      "n": 100,
+      "has_graph": 1,
+      "mean_real_slots": 14.97,
+      "n_vuln": 1
+    },
+    "squirrel": {
+      "n": 100,
+      "has_graph": 1,
+      "mean_real_slots": 6.4,
+      "n_vuln": 2
+    },
+    "sssd": {
+      "n": 99,
+      "has_graph": 1,
+      "mean_real_slots": 30.01010101010101,
+      "n_vuln": 4
+    },
+    "proftpd": {
+      "n": 98,
+      "has_graph": 1,
+      "mean_real_slots": 16.20408163265306,
+      "n_vuln": 2
+    },
+    "libplist": {
+      "n": 97,
+      "has_graph": 1,
+      "mean_real_slots": 26.45360824742268,
+      "n_vuln": 8
+    },
+    "texlive-source": {
+      "n": 97,
+      "has_graph": 1,
+      "mean_real_slots": 8.350515463917526,
+      "n_vuln": 2
+    },
+    "varnish-cache": {
+      "n": 97,
+      "has_graph": 1,
+      "mean_real_slots": 19.38144329896907,
+      "n_vuln": 4
+    },
+    "libgcrypt": {
+      "n": 97,
+      "has_graph": 1,
+      "mean_real_slots": 23.463917525773194,
+      "n_vuln": 10
+    },
+    "cups": {
+      "n": 96,
+      "has_graph": 1,
+      "mean_real_slots": 24.270833333333332,
+      "n_vuln": 3
+    },
+    "irssi": {
+      "n": 96,
+      "has_graph": 1,
+      "mean_real_slots": 6.458333333333333,
+      "n_vuln": 3
+    },
+    "mjg59_linux": {
+      "n": 96,
+      "has_graph": 1,
+      "mean_real_slots": 14.333333333333334,
+      "n_vuln": 0
+    },
+    "gnulib": {
+      "n": 95,
+      "has_graph": 1,
+      "mean_real_slots": 16.326315789473686,
+      "n_vuln": 3
+    },
+    "faad2": {
+      "n": 95,
+      "has_graph": 1,
+      "mean_real_slots": 12.8,
+      "n_vuln": 2
+    },
+    "aspell": {
+      "n": 94,
+      "has_graph": 1,
+      "mean_real_slots": 5.308510638297872,
+      "n_vuln": 1
+    },
+    "imageworsener": {
+      "n": 93,
+      "has_graph": 1,
+      "mean_real_slots": 21.559139784946236,
+      "n_vuln": 2
+    },
+    "electron": {
+      "n": 93,
+      "has_graph": 1,
+      "mean_real_slots": 8.311827956989248,
+      "n_vuln": 2
+    },
+    "winscp": {
+      "n": 92,
+      "has_graph": 1,
+      "mean_real_slots": 6.6521739130434785,
+      "n_vuln": 1
+    },
+    "scylladb": {
+      "n": 92,
+      "has_graph": 1,
+      "mean_real_slots": 20.32608695652174,
+      "n_vuln": 0
+    },
+    "newsbeuter": {
+      "n": 91,
+      "has_graph": 1,
+      "mean_real_slots": 12.032967032967033,
+      "n_vuln": 5
+    },
+    "u-boot": {
+      "n": 91,
+      "has_graph": 1,
+      "mean_real_slots": 18.043956043956044,
+      "n_vuln": 2
+    },
+    "naviserver": {
+      "n": 91,
+      "has_graph": 1,
+      "mean_real_slots": 16.703296703296704,
+      "n_vuln": 1
+    },
+    "MilkyTracker": {
+      "n": 90,
+      "has_graph": 1,
+      "mean_real_slots": 4.144444444444445,
+      "n_vuln": 3
+    },
+    "optee_os": {
+      "n": 89,
+      "has_graph": 1,
+      "mean_real_slots": 19.382022471910112,
+      "n_vuln": 5
+    },
+    "deark": {
+      "n": 89,
+      "has_graph": 1,
+      "mean_real_slots": 19.674157303370787,
+      "n_vuln": 2
+    },
+    "cryptsetup": {
+      "n": 89,
+      "has_graph": 1,
+      "mean_real_slots": 28.528089887640448,
+      "n_vuln": 1
+    },
+    "libebml": {
+      "n": 88,
+      "has_graph": 1,
+      "mean_real_slots": 9.545454545454545,
+      "n_vuln": 5
+    },
+    "wolfssl": {
+      "n": 87,
+      "has_graph": 1,
+      "mean_real_slots": 9.057471264367816,
+      "n_vuln": 2
+    },
+    "LuaJIT": {
+      "n": 87,
+      "has_graph": 1,
+      "mean_real_slots": 14.586206896551724,
+      "n_vuln": 3
+    },
+    "exempi": {
+      "n": 86,
+      "has_graph": 1,
+      "mean_real_slots": 9.755813953488373,
+      "n_vuln": 6
+    },
+    "zziplib": {
+      "n": 86,
+      "has_graph": 1,
+      "mean_real_slots": 19.046511627906977,
+      "n_vuln": 10
+    },
+    "avahi": {
+      "n": 86,
+      "has_graph": 1,
+      "mean_real_slots": 11.279069767441861,
+      "n_vuln": 3
+    },
+    "tidy-html5": {
+      "n": 86,
+      "has_graph": 1,
+      "mean_real_slots": 3.7674418604651163,
+      "n_vuln": 1
+    },
+    "DBD-mysql": {
+      "n": 86,
+      "has_graph": 1,
+      "mean_real_slots": 23.569767441860463,
+      "n_vuln": 3
+    },
+    "menu-cache": {
+      "n": 85,
+      "has_graph": 1,
+      "mean_real_slots": 8.070588235294117,
+      "n_vuln": 0
+    },
+    "iproute2": {
+      "n": 84,
+      "has_graph": 1,
+      "mean_real_slots": 19.523809523809526,
+      "n_vuln": 1
+    },
+    "mumble": {
+      "n": 83,
+      "has_graph": 1,
+      "mean_real_slots": 9.91566265060241,
+      "n_vuln": 3
+    },
+    "haproxy-1_4": {
+      "n": 83,
+      "has_graph": 1,
+      "mean_real_slots": 26.686746987951807,
+      "n_vuln": 0
+    },
+    "libgadu": {
+      "n": 81,
+      "has_graph": 1,
+      "mean_real_slots": 23.691358024691358,
+      "n_vuln": 4
+    },
+    "crawl": {
+      "n": 81,
+      "has_graph": 1,
+      "mean_real_slots": 6.888888888888889,
+      "n_vuln": 1
+    },
+    "c-blosc2": {
+      "n": 81,
+      "has_graph": 1,
+      "mean_real_slots": 16.987654320987655,
+      "n_vuln": 1
+    },
+    "libvips": {
+      "n": 80,
+      "has_graph": 1,
+      "mean_real_slots": 8.6125,
+      "n_vuln": 3
+    },
+    "accountsservice": {
+      "n": 79,
+      "has_graph": 1,
+      "mean_real_slots": 11.708860759493671,
+      "n_vuln": 3
+    },
+    "lxcfs": {
+      "n": 79,
+      "has_graph": 1,
+      "mean_real_slots": 17.569620253164558,
+      "n_vuln": 1
+    },
+    "lepton": {
+      "n": 79,
+      "has_graph": 1,
+      "mean_real_slots": 14.822784810126583,
+      "n_vuln": 1
+    },
+    "pgbouncer": {
+      "n": 78,
+      "has_graph": 1,
+      "mean_real_slots": 14.512820512820513,
+      "n_vuln": 3
+    },
+    "ipmitool": {
+      "n": 78,
+      "has_graph": 1,
+      "mean_real_slots": 20.705128205128204,
+      "n_vuln": 4
+    },
+    "abcm2ps": {
+      "n": 78,
+      "has_graph": 1,
+      "mean_real_slots": 12.166666666666666,
+      "n_vuln": 2
+    },
+    "jdk11u": {
+      "n": 78,
+      "has_graph": 1,
+      "mean_real_slots": 12.782051282051283,
+      "n_vuln": 0
+    },
+    "libavif": {
+      "n": 78,
+      "has_graph": 1,
+      "mean_real_slots": 21.858974358974358,
+      "n_vuln": 1
+    },
+    "FreeRTOS-Kernel": {
+      "n": 77,
+      "has_graph": 1,
+      "mean_real_slots": 25.07792207792208,
+      "n_vuln": 2
+    },
+    "libcroco": {
+      "n": 76,
+      "has_graph": 1,
+      "mean_real_slots": 7.302631578947368,
+      "n_vuln": 2
+    },
+    "micro-ecc": {
+      "n": 76,
+      "has_graph": 1,
+      "mean_real_slots": 22.842105263157894,
+      "n_vuln": 1
+    },
+    "uriparser": {
+      "n": 75,
+      "has_graph": 1,
+      "mean_real_slots": 6.68,
+      "n_vuln": 2
+    },
+    "gdm": {
+      "n": 74,
+      "has_graph": 1,
+      "mean_real_slots": 7.405405405405405,
+      "n_vuln": 1
+    },
+    "cairo": {
+      "n": 74,
+      "has_graph": 1,
+      "mean_real_slots": 24.594594594594593,
+      "n_vuln": 1
+    },
+    "gst-plugins-ugly": {
+      "n": 73,
+      "has_graph": 1,
+      "mean_real_slots": 12.438356164383562,
+      "n_vuln": 1
+    },
+    "GameNetworkingSockets": {
+      "n": 73,
+      "has_graph": 1,
+      "mean_real_slots": 14.315068493150685,
+      "n_vuln": 2
+    },
+    "pdns": {
+      "n": 73,
+      "has_graph": 1,
+      "mean_real_slots": 11.917808219178083,
+      "n_vuln": 3
+    },
+    "libtasn1": {
+      "n": 73,
+      "has_graph": 1,
+      "mean_real_slots": 12.876712328767123,
+      "n_vuln": 6
+    },
+    "libmobi": {
+      "n": 73,
+      "has_graph": 1,
+      "mean_real_slots": 28.465753424657535,
+      "n_vuln": 6
+    },
+    "Sigil": {
+      "n": 73,
+      "has_graph": 1,
+      "mean_real_slots": 10.04109589041096,
+      "n_vuln": 3
+    },
+    "nedmalloc": {
+      "n": 72,
+      "has_graph": 1,
+      "mean_real_slots": 13.694444444444445,
+      "n_vuln": 1
+    },
+    "uftpd": {
+      "n": 71,
+      "has_graph": 1,
+      "mean_real_slots": 24.070422535211268,
+      "n_vuln": 2
+    },
+    "deepin-clone": {
+      "n": 71,
+      "has_graph": 1,
+      "mean_real_slots": 9.71830985915493,
+      "n_vuln": 3
+    },
+    "libgxps": {
+      "n": 71,
+      "has_graph": 1,
+      "mean_real_slots": 11.04225352112676,
+      "n_vuln": 2
+    },
+    "libdwarf-code": {
+      "n": 70,
+      "has_graph": 1,
+      "mean_real_slots": 9.7,
+      "n_vuln": 2
+    },
+    "tmux": {
+      "n": 70,
+      "has_graph": 1,
+      "mean_real_slots": 31.685714285714287,
+      "n_vuln": 1
+    },
+    "libgdata": {
+      "n": 69,
+      "has_graph": 1,
+      "mean_real_slots": 9.072463768115941,
+      "n_vuln": 2
+    },
+    "VeraCrypt": {
+      "n": 68,
+      "has_graph": 1,
+      "mean_real_slots": 8.294117647058824,
+      "n_vuln": 1
+    },
+    "pigz": {
+      "n": 68,
+      "has_graph": 1,
+      "mean_real_slots": 12.029411764705882,
+      "n_vuln": 1
+    },
+    "contiki-ng": {
+      "n": 67,
+      "has_graph": 1,
+      "mean_real_slots": 17.104477611940297,
+      "n_vuln": 1
+    },
+    "p11-kit": {
+      "n": 67,
+      "has_graph": 1,
+      "mean_real_slots": 20.761194029850746,
+      "n_vuln": 2
+    },
+    "wolfMQTT": {
+      "n": 67,
+      "has_graph": 1,
+      "mean_real_slots": 7.358208955223881,
+      "n_vuln": 1
+    },
+    "infradead": {
+      "n": 66,
+      "has_graph": 1,
+      "mean_real_slots": 25.37878787878788,
+      "n_vuln": 2
+    },
+    "libtpms": {
+      "n": 66,
+      "has_graph": 1,
+      "mean_real_slots": 7.348484848484849,
+      "n_vuln": 3
+    },
+    "screen": {
+      "n": 66,
+      "has_graph": 1,
+      "mean_real_slots": 7.621212121212121,
+      "n_vuln": 1
+    },
+    "ioq3": {
+      "n": 65,
+      "has_graph": 1,
+      "mean_real_slots": 14.261538461538462,
+      "n_vuln": 2
+    },
+    "libexif": {
+      "n": 65,
+      "has_graph": 1,
+      "mean_real_slots": 10.738461538461538,
+      "n_vuln": 7
+    },
+    "empathy": {
+      "n": 65,
+      "has_graph": 1,
+      "mean_real_slots": 9.169230769230769,
+      "n_vuln": 2
+    },
+    "mapserver": {
+      "n": 64,
+      "has_graph": 1,
+      "mean_real_slots": 12.125,
+      "n_vuln": 1
+    },
+    "sthttpd": {
+      "n": 64,
+      "has_graph": 1,
+      "mean_real_slots": 14.734375,
+      "n_vuln": 1
+    },
+    "OpenJK": {
+      "n": 64,
+      "has_graph": 1,
+      "mean_real_slots": 15.4375,
+      "n_vuln": 1
+    },
+    "illumos-gate": {
+      "n": 64,
+      "has_graph": 1,
+      "mean_real_slots": 18.625,
+      "n_vuln": 1
+    },
+    "patch": {
+      "n": 64,
+      "has_graph": 1,
+      "mean_real_slots": 13.359375,
+      "n_vuln": 4
+    },
+    "libav": {
+      "n": 63,
+      "has_graph": 1,
+      "mean_real_slots": 15.079365079365079,
+      "n_vuln": 11
+    },
+    "JPEGsnoop": {
+      "n": 63,
+      "has_graph": 1,
+      "mean_real_slots": 11.253968253968255,
+      "n_vuln": 1
+    },
+    "usbredir": {
+      "n": 63,
+      "has_graph": 1,
+      "mean_real_slots": 30.61904761904762,
+      "n_vuln": 0
+    },
+    "gnome-session": {
+      "n": 62,
+      "has_graph": 1,
+      "mean_real_slots": 7.5,
+      "n_vuln": 1
+    },
+    "spice-vd_agent": {
+      "n": 62,
+      "has_graph": 1,
+      "mean_real_slots": 24.0,
+      "n_vuln": 6
+    },
+    "staging": {
+      "n": 62,
+      "has_graph": 1,
+      "mean_real_slots": 20.112903225806452,
+      "n_vuln": 1
+    },
+    "sparc": {
+      "n": 62,
+      "has_graph": 1,
+      "mean_real_slots": 25.129032258064516,
+      "n_vuln": 1
+    },
+    "gnome-settings-daemon": {
+      "n": 62,
+      "has_graph": 1,
+      "mean_real_slots": 12.612903225806452,
+      "n_vuln": 0
+    },
+    "squashfs-tools": {
+      "n": 62,
+      "has_graph": 1,
+      "mean_real_slots": 19.79032258064516,
+      "n_vuln": 6
+    },
+    "zlib": {
+      "n": 61,
+      "has_graph": 1,
+      "mean_real_slots": 21.21311475409836,
+      "n_vuln": 5
+    },
+    "cifs-utils": {
+      "n": 61,
+      "has_graph": 1,
+      "mean_real_slots": 15.967213114754099,
+      "n_vuln": 3
+    },
+    "pango": {
+      "n": 60,
+      "has_graph": 1,
+      "mean_real_slots": 19.283333333333335,
+      "n_vuln": 4
+    },
+    "owntone-server": {
+      "n": 60,
+      "has_graph": 1,
+      "mean_real_slots": 12.8,
+      "n_vuln": 1
+    },
+    "kitty": {
+      "n": 59,
+      "has_graph": 1,
+      "mean_real_slots": 8.779661016949152,
+      "n_vuln": 1
+    },
+    "gnumeric": {
+      "n": 59,
+      "has_graph": 1,
+      "mean_real_slots": 6.1525423728813555,
+      "n_vuln": 1
+    },
+    "libmodbus": {
+      "n": 58,
+      "has_graph": 1,
+      "mean_real_slots": 29.413793103448278,
+      "n_vuln": 1
+    },
+    "beanstalkd": {
+      "n": 58,
+      "has_graph": 1,
+      "mean_real_slots": 7.948275862068965,
+      "n_vuln": 0
+    },
+    "sddm": {
+      "n": 58,
+      "has_graph": 1,
+      "mean_real_slots": 7.982758620689655,
+      "n_vuln": 3
+    },
+    "edk2": {
+      "n": 58,
+      "has_graph": 1,
+      "mean_real_slots": 5.517241379310345,
+      "n_vuln": 2
+    },
+    "polkit": {
+      "n": 57,
+      "has_graph": 1,
+      "mean_real_slots": 8.157894736842104,
+      "n_vuln": 2
+    },
+    "evince": {
+      "n": 57,
+      "has_graph": 1,
+      "mean_real_slots": 9.736842105263158,
+      "n_vuln": 3
+    },
+    "mintty": {
+      "n": 57,
+      "has_graph": 1,
+      "mean_real_slots": 10.491228070175438,
+      "n_vuln": 1
+    },
+    "spice-common": {
+      "n": 57,
+      "has_graph": 1,
+      "mean_real_slots": 9.596491228070175,
+      "n_vuln": 1
+    },
+    "selinux": {
+      "n": 57,
+      "has_graph": 1,
+      "mean_real_slots": 31.526315789473685,
+      "n_vuln": 3
+    },
+    "ldns": {
+      "n": 57,
+      "has_graph": 1,
+      "mean_real_slots": 19.54385964912281,
+      "n_vuln": 1
+    },
+    "libtool": {
+      "n": 57,
+      "has_graph": 1,
+      "mean_real_slots": 8.578947368421053,
+      "n_vuln": 0
+    },
+    "poco": {
+      "n": 56,
+      "has_graph": 1,
+      "mean_real_slots": 9.035714285714286,
+      "n_vuln": 1
+    },
+    "minetest": {
+      "n": 56,
+      "has_graph": 1,
+      "mean_real_slots": 15.982142857142858,
+      "n_vuln": 2
+    },
+    "abrt": {
+      "n": 55,
+      "has_graph": 1,
+      "mean_real_slots": 24.945454545454545,
+      "n_vuln": 14
+    },
+    "PDFGen": {
+      "n": 55,
+      "has_graph": 1,
+      "mean_real_slots": 17.70909090909091,
+      "n_vuln": 1
+    },
+    "grub": {
+      "n": 55,
+      "has_graph": 1,
+      "mean_real_slots": 24.236363636363638,
+      "n_vuln": 3
+    },
+    "libssh-mirror": {
+      "n": 55,
+      "has_graph": 1,
+      "mean_real_slots": 23.036363636363635,
+      "n_vuln": 4
+    },
+    "linux-fbdev": {
+      "n": 55,
+      "has_graph": 1,
+      "mean_real_slots": 16.87272727272727,
+      "n_vuln": 2
+    },
+    "libgphoto2": {
+      "n": 55,
+      "has_graph": 1,
+      "mean_real_slots": 19.963636363636365,
+      "n_vuln": 2
+    },
+    "percona-xtrabackup": {
+      "n": 55,
+      "has_graph": 1,
+      "mean_real_slots": 12.690909090909091,
+      "n_vuln": 0
+    },
+    "pengutronix": {
+      "n": 54,
+      "has_graph": 1,
+      "mean_real_slots": 14.055555555555555,
+      "n_vuln": 2
+    },
+    "gnome-bluetooth": {
+      "n": 54,
+      "has_graph": 1,
+      "mean_real_slots": 9.12962962962963,
+      "n_vuln": 0
+    },
+    "mod_auth_mellon": {
+      "n": 53,
+      "has_graph": 1,
+      "mean_real_slots": 13.924528301886792,
+      "n_vuln": 2
+    },
+    "libjpeg": {
+      "n": 53,
+      "has_graph": 1,
+      "mean_real_slots": 10.981132075471699,
+      "n_vuln": 4
+    },
+    "opaque": {
+      "n": 53,
+      "has_graph": 1,
+      "mean_real_slots": 21.754716981132077,
+      "n_vuln": 1
+    },
+    "JUCE": {
+      "n": 53,
+      "has_graph": 1,
+      "mean_real_slots": 7.0,
+      "n_vuln": 1
+    },
+    "GIMP": {
+      "n": 52,
+      "has_graph": 1,
+      "mean_real_slots": 13.884615384615385,
+      "n_vuln": 6
+    },
+    "bdwgc": {
+      "n": 51,
+      "has_graph": 1,
+      "mean_real_slots": 19.333333333333332,
+      "n_vuln": 6
+    },
+    "bfgminer": {
+      "n": 51,
+      "has_graph": 1,
+      "mean_real_slots": 14.509803921568627,
+      "n_vuln": 2
+    },
+    "openafs": {
+      "n": 50,
+      "has_graph": 1,
+      "mean_real_slots": 18.18,
+      "n_vuln": 1
+    },
+    "pdfresurrect": {
+      "n": 50,
+      "has_graph": 1,
+      "mean_real_slots": 16.66,
+      "n_vuln": 1
+    },
+    "NetHack": {
+      "n": 50,
+      "has_graph": 1,
+      "mean_real_slots": 10.52,
+      "n_vuln": 1
+    },
+    "accel-ppp": {
+      "n": 50,
+      "has_graph": 1,
+      "mean_real_slots": 24.28,
+      "n_vuln": 1
+    },
+    "libslirp": {
+      "n": 50,
+      "has_graph": 1,
+      "mean_real_slots": 16.3,
+      "n_vuln": 8
+    },
+    "librelp": {
+      "n": 50,
+      "has_graph": 1,
+      "mean_real_slots": 26.86,
+      "n_vuln": 1
+    },
+    "tcmu-runner": {
+      "n": 49,
+      "has_graph": 1,
+      "mean_real_slots": 19.408163265306122,
+      "n_vuln": 3
+    },
+    "bubblewrap": {
+      "n": 49,
+      "has_graph": 1,
+      "mean_real_slots": 14.857142857142858,
+      "n_vuln": 2
+    },
+    "libmysofa": {
+      "n": 49,
+      "has_graph": 1,
+      "mean_real_slots": 21.142857142857142,
+      "n_vuln": 3
+    },
+    "libmatroska": {
+      "n": 49,
+      "has_graph": 1,
+      "mean_real_slots": 6.26530612244898,
+      "n_vuln": 1
+    },
+    "gpsd": {
+      "n": 49,
+      "has_graph": 1,
+      "mean_real_slots": 13.122448979591837,
+      "n_vuln": 1
+    },
+    "libxfont": {
+      "n": 48,
+      "has_graph": 1,
+      "mean_real_slots": 9.020833333333334,
+      "n_vuln": 4
+    },
+    "ekiga": {
+      "n": 48,
+      "has_graph": 1,
+      "mean_real_slots": 5.458333333333333,
+      "n_vuln": 1
+    },
+    "libhtp": {
+      "n": 48,
+      "has_graph": 1,
+      "mean_real_slots": 31.479166666666668,
+      "n_vuln": 0
+    },
+    "libreswan": {
+      "n": 47,
+      "has_graph": 1,
+      "mean_real_slots": 27.404255319148938,
+      "n_vuln": 3
+    },
+    "libiec61850": {
+      "n": 47,
+      "has_graph": 1,
+      "mean_real_slots": 10.191489361702128,
+      "n_vuln": 2
+    },
+    "gdal": {
+      "n": 47,
+      "has_graph": 1,
+      "mean_real_slots": 12.297872340425531,
+      "n_vuln": 3
+    },
+    "libcaca": {
+      "n": 47,
+      "has_graph": 1,
+      "mean_real_slots": 8.702127659574469,
+      "n_vuln": 1
+    },
+    "x11vnc": {
+      "n": 47,
+      "has_graph": 1,
+      "mean_real_slots": 11.106382978723405,
+      "n_vuln": 1
+    },
+    "ardour": {
+      "n": 47,
+      "has_graph": 1,
+      "mean_real_slots": 5.680851063829787,
+      "n_vuln": 1
+    },
+    "jdk8u": {
+      "n": 47,
+      "has_graph": 1,
+      "mean_real_slots": 8.063829787234043,
+      "n_vuln": 0
+    },
+    "libmspack": {
+      "n": 46,
+      "has_graph": 1,
+      "mean_real_slots": 19.76086956521739,
+      "n_vuln": 4
+    },
+    "qtbase": {
+      "n": 46,
+      "has_graph": 1,
+      "mean_real_slots": 7.608695652173913,
+      "n_vuln": 1
+    },
+    "guile": {
+      "n": 46,
+      "has_graph": 1,
+      "mean_real_slots": 13.5,
+      "n_vuln": 1
+    },
+    "libzip": {
+      "n": 45,
+      "has_graph": 1,
+      "mean_real_slots": 25.955555555555556,
+      "n_vuln": 2
+    },
+    "openthread": {
+      "n": 45,
+      "has_graph": 1,
+      "mean_real_slots": 10.755555555555556,
+      "n_vuln": 2
+    },
+    "rsync": {
+      "n": 45,
+      "has_graph": 1,
+      "mean_real_slots": 21.177777777777777,
+      "n_vuln": 5
+    },
+    "libguestfs": {
+      "n": 45,
+      "has_graph": 1,
+      "mean_real_slots": 21.57777777777778,
+      "n_vuln": 1
+    },
+    "linux-pam": {
+      "n": 45,
+      "has_graph": 1,
+      "mean_real_slots": 18.555555555555557,
+      "n_vuln": 3
+    },
+    "libMeshb": {
+      "n": 45,
+      "has_graph": 1,
+      "mean_real_slots": 11.177777777777777,
+      "n_vuln": 1
+    },
+    "radvd": {
+      "n": 44,
+      "has_graph": 1,
+      "mean_real_slots": 17.318181818181817,
+      "n_vuln": 7
+    },
+    "libffi": {
+      "n": 44,
+      "has_graph": 1,
+      "mean_real_slots": 9.045454545454545,
+      "n_vuln": 1
+    },
+    "389-ds-base": {
+      "n": 44,
+      "has_graph": 1,
+      "mean_real_slots": 13.545454545454545,
+      "n_vuln": 2
+    },
+    "node-sqlite3": {
+      "n": 44,
+      "has_graph": 1,
+      "mean_real_slots": 10.227272727272727,
+      "n_vuln": 0
+    },
+    "torque": {
+      "n": 43,
+      "has_graph": 1,
+      "mean_real_slots": 12.0,
+      "n_vuln": 4
+    },
+    "nmap": {
+      "n": 43,
+      "has_graph": 1,
+      "mean_real_slots": 16.325581395348838,
+      "n_vuln": 1
+    },
+    "trojita": {
+      "n": 43,
+      "has_graph": 1,
+      "mean_real_slots": 9.046511627906977,
+      "n_vuln": 1
+    },
+    "lftp": {
+      "n": 43,
+      "has_graph": 1,
+      "mean_real_slots": 12.232558139534884,
+      "n_vuln": 1
+    },
+    "monit": {
+      "n": 43,
+      "has_graph": 1,
+      "mean_real_slots": 11.767441860465116,
+      "n_vuln": 2
+    },
+    "cgminer": {
+      "n": 42,
+      "has_graph": 1,
+      "mean_real_slots": 18.666666666666668,
+      "n_vuln": 4
+    },
+    "unzip": {
+      "n": 42,
+      "has_graph": 1,
+      "mean_real_slots": 9.523809523809524,
+      "n_vuln": 1
+    },
+    "percona-xtradb-cluster": {
+      "n": 42,
+      "has_graph": 1,
+      "mean_real_slots": 13.214285714285714,
+      "n_vuln": 1
+    },
+    "libyaml": {
+      "n": 42,
+      "has_graph": 1,
+      "mean_real_slots": 32.0,
+      "n_vuln": 1
+    },
+    "mysql-wsrep": {
+      "n": 42,
+      "has_graph": 1,
+      "mean_real_slots": 14.261904761904763,
+      "n_vuln": 1
+    },
+    "e2guardian": {
+      "n": 42,
+      "has_graph": 1,
+      "mean_real_slots": 9.023809523809524,
+      "n_vuln": 1
+    },
+    "gpmf-parser": {
+      "n": 41,
+      "has_graph": 1,
+      "mean_real_slots": 13.926829268292684,
+      "n_vuln": 2
+    },
+    "ext-http": {
+      "n": 41,
+      "has_graph": 1,
+      "mean_real_slots": 20.51219512195122,
+      "n_vuln": 1
+    },
+    "lrzip": {
+      "n": 41,
+      "has_graph": 1,
+      "mean_real_slots": 11.268292682926829,
+      "n_vuln": 1
+    },
+    "libfuse": {
+      "n": 41,
+      "has_graph": 1,
+      "mean_real_slots": 12.658536585365853,
+      "n_vuln": 2
+    },
+    "swtpm": {
+      "n": 41,
+      "has_graph": 1,
+      "mean_real_slots": 27.390243902439025,
+      "n_vuln": 1
+    },
+    "libpcap": {
+      "n": 40,
+      "has_graph": 1,
+      "mean_real_slots": 24.125,
+      "n_vuln": 5
+    },
+    "ytnef": {
+      "n": 40,
+      "has_graph": 1,
+      "mean_real_slots": 5.625,
+      "n_vuln": 3
+    },
+    "cantata": {
+      "n": 40,
+      "has_graph": 1,
+      "mean_real_slots": 9.075,
+      "n_vuln": 1
+    },
+    "epiphany": {
+      "n": 40,
+      "has_graph": 1,
+      "mean_real_slots": 5.1,
+      "n_vuln": 0
+    },
+    "subversion": {
+      "n": 40,
+      "has_graph": 1,
+      "mean_real_slots": 19.225,
+      "n_vuln": 0
+    },
+    "squidclamav": {
+      "n": 39,
+      "has_graph": 1,
+      "mean_real_slots": 14.256410256410257,
+      "n_vuln": 1
+    },
+    "firejail": {
+      "n": 38,
+      "has_graph": 1,
+      "mean_real_slots": 16.526315789473685,
+      "n_vuln": 3
+    },
+    "libsixel": {
+      "n": 38,
+      "has_graph": 1,
+      "mean_real_slots": 27.57894736842105,
+      "n_vuln": 2
+    },
+    "fribidi": {
+      "n": 38,
+      "has_graph": 1,
+      "mean_real_slots": 7.973684210526316,
+      "n_vuln": 2
+    },
+    "htcondor": {
+      "n": 38,
+      "has_graph": 1,
+      "mean_real_slots": 17.289473684210527,
+      "n_vuln": 2
+    },
+    "mailutils": {
+      "n": 38,
+      "has_graph": 1,
+      "mean_real_slots": 24.289473684210527,
+      "n_vuln": 0
+    },
+    "booth": {
+      "n": 38,
+      "has_graph": 1,
+      "mean_real_slots": 12.105263157894736,
+      "n_vuln": 1
+    },
+    "ZLMediaKit": {
+      "n": 38,
+      "has_graph": 1,
+      "mean_real_slots": 10.236842105263158,
+      "n_vuln": 0
+    },
+    "lynx-snapshots": {
+      "n": 37,
+      "has_graph": 1,
+      "mean_real_slots": 10.108108108108109,
+      "n_vuln": 1
+    },
+    "keepalived": {
+      "n": 37,
+      "has_graph": 1,
+      "mean_real_slots": 13.216216216216216,
+      "n_vuln": 3
+    },
+    "uncurl": {
+      "n": 37,
+      "has_graph": 1,
+      "mean_real_slots": 32.0,
+      "n_vuln": 1
+    },
+    "olm": {
+      "n": 37,
+      "has_graph": 1,
+      "mean_real_slots": 21.56756756756757,
+      "n_vuln": 1
+    },
+    "cyrus-sasl": {
+      "n": 37,
+      "has_graph": 1,
+      "mean_real_slots": 18.783783783783782,
+      "n_vuln": 0
+    },
+    "mksh": {
+      "n": 37,
+      "has_graph": 1,
+      "mean_real_slots": 13.27027027027027,
+      "n_vuln": 0
+    },
+    "capstone": {
+      "n": 36,
+      "has_graph": 1,
+      "mean_real_slots": 5.0,
+      "n_vuln": 2
+    },
+    "muon": {
+      "n": 36,
+      "has_graph": 1,
+      "mean_real_slots": 8.0,
+      "n_vuln": 1
+    },
+    "postsrsd": {
+      "n": 36,
+      "has_graph": 1,
+      "mean_real_slots": 12.194444444444445,
+      "n_vuln": 2
+    },
+    "pycurl": {
+      "n": 36,
+      "has_graph": 1,
+      "mean_real_slots": 12.777777777777779,
+      "n_vuln": 0
+    },
+    "keepkey-firmware": {
+      "n": 36,
+      "has_graph": 1,
+      "mean_real_slots": 16.166666666666668,
+      "n_vuln": 1
+    },
+    "librepo": {
+      "n": 36,
+      "has_graph": 1,
+      "mean_real_slots": 9.944444444444445,
+      "n_vuln": 1
+    },
+    "xcursor": {
+      "n": 35,
+      "has_graph": 1,
+      "mean_real_slots": 8.371428571428572,
+      "n_vuln": 2
+    },
+    "openbsd": {
+      "n": 34,
+      "has_graph": 1,
+      "mean_real_slots": 11.676470588235293,
+      "n_vuln": 1
+    },
+    "wangle": {
+      "n": 34,
+      "has_graph": 1,
+      "mean_real_slots": 21.823529411764707,
+      "n_vuln": 2
+    },
+    "NetworkManager-vpnc": {
+      "n": 34,
+      "has_graph": 1,
+      "mean_real_slots": 9.323529411764707,
+      "n_vuln": 0
+    },
+    "ppp": {
+      "n": 33,
+      "has_graph": 1,
+      "mean_real_slots": 16.424242424242426,
+      "n_vuln": 1
+    },
+    "sfntly": {
+      "n": 33,
+      "has_graph": 1,
+      "mean_real_slots": 5.848484848484849,
+      "n_vuln": 3
+    },
+    "ModSecurity": {
+      "n": 33,
+      "has_graph": 1,
+      "mean_real_slots": 26.90909090909091,
+      "n_vuln": 2
+    },
+    "serenity": {
+      "n": 33,
+      "has_graph": 1,
+      "mean_real_slots": 5.515151515151516,
+      "n_vuln": 5
+    },
+    "acpica": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 11.15625,
+      "n_vuln": 3
+    },
+    "unixODBC": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 9.90625,
+      "n_vuln": 1
+    },
+    "UltraVNC": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 15.53125,
+      "n_vuln": 1
+    },
+    "open5gs": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 27.3125,
+      "n_vuln": 1
+    },
+    "quassel": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 9.3125,
+      "n_vuln": 2
+    },
+    "sudo": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 21.4375,
+      "n_vuln": 3
+    },
+    "vino": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 15.5,
+      "n_vuln": 4
+    },
+    "bootstrap-dht": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 14.125,
+      "n_vuln": 2
+    },
+    "aubio": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 32.0,
+      "n_vuln": 0
+    },
+    "grep": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 17.125,
+      "n_vuln": 2
+    },
+    "barebox": {
+      "n": 32,
+      "has_graph": 1,
+      "mean_real_slots": 18.59375,
+      "n_vuln": 2
+    },
+    "gifsicle": {
+      "n": 31,
+      "has_graph": 1,
+      "mean_real_slots": 12.451612903225806,
+      "n_vuln": 2
+    },
+    "ArduinoJson": {
+      "n": 31,
+      "has_graph": 1,
+      "mean_real_slots": 3.7419354838709675,
+      "n_vuln": 1
+    },
+    "libssh2": {
+      "n": 31,
+      "has_graph": 1,
+      "mean_real_slots": 28.580645161290324,
+      "n_vuln": 2
+    },
+    "chafa": {
+      "n": 31,
+      "has_graph": 1,
+      "mean_real_slots": 8.806451612903226,
+      "n_vuln": 3
+    },
+    "shadow": {
+      "n": 30,
+      "has_graph": 1,
+      "mean_real_slots": 18.366666666666667,
+      "n_vuln": 1
+    },
+    "tar": {
+      "n": 30,
+      "has_graph": 1,
+      "mean_real_slots": 19.533333333333335,
+      "n_vuln": 2
+    },
+    "platform_bionic": {
+      "n": 30,
+      "has_graph": 1,
+      "mean_real_slots": 8.433333333333334,
+      "n_vuln": 3
+    },
+    "systemd-stable": {
+      "n": 30,
+      "has_graph": 1,
+      "mean_real_slots": 11.633333333333333,
+      "n_vuln": 0
+    },
+    "ssdp-responder": {
+      "n": 29,
+      "has_graph": 1,
+      "mean_real_slots": 13.241379310344827,
+      "n_vuln": 1
+    },
+    "evolution": {
+      "n": 29,
+      "has_graph": 1,
+      "mean_real_slots": 10.862068965517242,
+      "n_vuln": 1
+    },
+    "kopano-core": {
+      "n": 29,
+      "has_graph": 1,
+      "mean_real_slots": 7.9655172413793105,
+      "n_vuln": 1
+    },
+    "strongswan": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 22.25,
+      "n_vuln": 1
+    },
+    "jq": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 16.0,
+      "n_vuln": 1
+    },
+    "pixman": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 28.785714285714285,
+      "n_vuln": 1
+    },
+    "hivex": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 23.321428571428573,
+      "n_vuln": 4
+    },
+    "advancecomp": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 11.785714285714286,
+      "n_vuln": 2
+    },
+    "pam_radius": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 15.571428571428571,
+      "n_vuln": 1
+    },
+    "trafficserver": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 14.357142857142858,
+      "n_vuln": 0
+    },
+    "libzmq": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 18.821428571428573,
+      "n_vuln": 0
+    },
+    "EternalTerminal": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 13.678571428571429,
+      "n_vuln": 2
+    },
+    "open-vm-tools": {
+      "n": 28,
+      "has_graph": 1,
+      "mean_real_slots": 9.428571428571429,
+      "n_vuln": 0
+    },
+    "dosfstools": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 15.333333333333334,
+      "n_vuln": 2
+    },
+    "atheme": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 13.703703703703704,
+      "n_vuln": 1
+    },
+    "kdeconnect-kde": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 12.37037037037037,
+      "n_vuln": 4
+    },
+    "fizz": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 7.37037037037037,
+      "n_vuln": 1
+    },
+    "xrootd": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 7.666666666666667,
+      "n_vuln": 1
+    },
+    "libbson": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 31.333333333333332,
+      "n_vuln": 2
+    },
+    "samurai": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 10.074074074074074,
+      "n_vuln": 2
+    },
+    "shellinabox": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 12.444444444444445,
+      "n_vuln": 1
+    },
+    "ox": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 9.25925925925926,
+      "n_vuln": 1
+    },
+    "qemu-kvm": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 13.185185185185185,
+      "n_vuln": 2
+    },
+    "char-misc": {
+      "n": 27,
+      "has_graph": 1,
+      "mean_real_slots": 15.444444444444445,
+      "n_vuln": 0
+    },
+    "ettercap": {
+      "n": 26,
+      "has_graph": 1,
+      "mean_real_slots": 13.76923076923077,
+      "n_vuln": 2
+    },
+    "linux-fs": {
+      "n": 26,
+      "has_graph": 1,
+      "mean_real_slots": 24.53846153846154,
+      "n_vuln": 1
+    },
+    "icoutils": {
+      "n": 26,
+      "has_graph": 1,
+      "mean_real_slots": 15.807692307692308,
+      "n_vuln": 4
+    },
+    "exif": {
+      "n": 26,
+      "has_graph": 1,
+      "mean_real_slots": 11.923076923076923,
+      "n_vuln": 2
+    },
+    "clutter": {
+      "n": 26,
+      "has_graph": 1,
+      "mean_real_slots": 8.307692307692308,
+      "n_vuln": 1
+    },
+    "open62541": {
+      "n": 26,
+      "has_graph": 1,
+      "mean_real_slots": 6.846153846153846,
+      "n_vuln": 1
+    },
+    "MAC-Telnet": {
+      "n": 25,
+      "has_graph": 1,
+      "mean_real_slots": 22.24,
+      "n_vuln": 1
+    },
+    "lhasa": {
+      "n": 25,
+      "has_graph": 1,
+      "mean_real_slots": 10.0,
+      "n_vuln": 1
+    },
+    "qBittorrent": {
+      "n": 25,
+      "has_graph": 1,
+      "mean_real_slots": 7.56,
+      "n_vuln": 1
+    },
+    "libmicrohttpd": {
+      "n": 25,
+      "has_graph": 1,
+      "mean_real_slots": 17.88,
+      "n_vuln": 1
+    },
+    "kernel": {
+      "n": 25,
+      "has_graph": 1,
+      "mean_real_slots": 30.8,
+      "n_vuln": 0
+    },
+    "pupnp": {
+      "n": 25,
+      "has_graph": 1,
+      "mean_real_slots": 5.04,
+      "n_vuln": 2
+    },
+    "tinyproxy": {
+      "n": 25,
+      "has_graph": 1,
+      "mean_real_slots": 19.44,
+      "n_vuln": 0
+    },
+    "pupnp-code": {
+      "n": 24,
+      "has_graph": 1,
+      "mean_real_slots": 15.541666666666666,
+      "n_vuln": 1
+    },
+    "cxxtools": {
+      "n": 24,
+      "has_graph": 1,
+      "mean_real_slots": 3.9166666666666665,
+      "n_vuln": 1
+    },
+    "at-spi2-core": {
+      "n": 24,
+      "has_graph": 1,
+      "mean_real_slots": 8.833333333333334,
+      "n_vuln": 0
+    },
+    "qemu_qemu": {
+      "n": 24,
+      "has_graph": 1,
+      "mean_real_slots": 17.208333333333332,
+      "n_vuln": 0
+    },
+    "pigeonhole": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 24.347826086956523,
+      "n_vuln": 2
+    },
+    "rabbitmq-c": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 14.391304347826088,
+      "n_vuln": 1
+    },
+    "bro": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 8.26086956521739,
+      "n_vuln": 2
+    },
+    "libjxl": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 18.130434782608695,
+      "n_vuln": 1
+    },
+    "wireless-drivers": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 16.304347826086957,
+      "n_vuln": 1
+    },
+    "admesh": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 7.0,
+      "n_vuln": 2
+    },
+    "raptor": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 9.304347826086957,
+      "n_vuln": 1
+    },
+    "zsh": {
+      "n": 23,
+      "has_graph": 1,
+      "mean_real_slots": 11.652173913043478,
+      "n_vuln": 0
+    },
+    "libuv": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 11.954545454545455,
+      "n_vuln": 2
+    },
+    "tnef": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 12.772727272727273,
+      "n_vuln": 3
+    },
+    "ngiflib": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 14.409090909090908,
+      "n_vuln": 4
+    },
+    "yubico-pam": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 19.40909090909091,
+      "n_vuln": 2
+    },
+    "nfdump": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 16.772727272727273,
+      "n_vuln": 1
+    },
+    "libdwarf": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 13.318181818181818,
+      "n_vuln": 1
+    },
+    "uWebSockets": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 11.181818181818182,
+      "n_vuln": 2
+    },
+    "pdf2json": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 5.454545454545454,
+      "n_vuln": 1
+    },
+    "atomicparsley": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 17.0,
+      "n_vuln": 1
+    },
+    "lsquic": {
+      "n": 22,
+      "has_graph": 1,
+      "mean_real_slots": 25.727272727272727,
+      "n_vuln": 1
+    },
+    "netfilter": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 12.428571428571429,
+      "n_vuln": 1
+    },
+    "enlightment": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 19.714285714285715,
+      "n_vuln": 7
+    },
+    "libgsf": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 11.0,
+      "n_vuln": 1
+    },
+    "libimobiledevice": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 23.047619047619047,
+      "n_vuln": 2
+    },
+    "shadowsocks-libev": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 15.19047619047619,
+      "n_vuln": 2
+    },
+    "bitlbee": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 22.238095238095237,
+      "n_vuln": 2
+    },
+    "ark": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 10.80952380952381,
+      "n_vuln": 1
+    },
+    "libnbd": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 18.19047619047619,
+      "n_vuln": 2
+    },
+    "Crow": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 6.619047619047619,
+      "n_vuln": 0
+    },
+    "node-lmdb": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 6.9523809523809526,
+      "n_vuln": 0
+    },
+    "udev": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 8.142857142857142,
+      "n_vuln": 1
+    },
+    "skiboot": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 13.0,
+      "n_vuln": 1
+    },
+    "janet": {
+      "n": 21,
+      "has_graph": 1,
+      "mean_real_slots": 19.61904761904762,
+      "n_vuln": 0
+    },
+    "libXfixes": {
+      "n": 20,
+      "has_graph": 1,
+      "mean_real_slots": 8.45,
+      "n_vuln": 1
+    },
+    "libinfinity": {
+      "n": 20,
+      "has_graph": 1,
+      "mean_real_slots": 15.0,
+      "n_vuln": 1
+    },
+    "c-ares": {
+      "n": 20,
+      "has_graph": 1,
+      "mean_real_slots": 19.3,
+      "n_vuln": 3
+    },
+    "glibc": {
+      "n": 20,
+      "has_graph": 1,
+      "mean_real_slots": 13.4,
+      "n_vuln": 0
+    },
+    "drogon": {
+      "n": 20,
+      "has_graph": 1,
+      "mean_real_slots": 4.65,
+      "n_vuln": 1
+    },
+    "qdecoder": {
+      "n": 20,
+      "has_graph": 1,
+      "mean_real_slots": 6.45,
+      "n_vuln": 0
+    },
+    "corosync": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 15.631578947368421,
+      "n_vuln": 1
+    },
+    "pngquant": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 13.263157894736842,
+      "n_vuln": 1
+    },
+    "netdata": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 21.894736842105264,
+      "n_vuln": 1
+    },
+    "png-img": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 6.7894736842105265,
+      "n_vuln": 1
+    },
+    "pam_tacplus": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 19.105263157894736,
+      "n_vuln": 1
+    },
+    "iortcw": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 8.368421052631579,
+      "n_vuln": 1
+    },
+    "sqlcipher": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 16.31578947368421,
+      "n_vuln": 1
+    },
+    "mbed-coap": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 26.31578947368421,
+      "n_vuln": 1
+    },
+    "shim": {
+      "n": 19,
+      "has_graph": 1,
+      "mean_real_slots": 11.052631578947368,
+      "n_vuln": 0
+    },
+    "das_watchdog": {
+      "n": 18,
+      "has_graph": 1,
+      "mean_real_slots": 14.444444444444445,
+      "n_vuln": 1
+    },
+    "openfortivpn": {
+      "n": 18,
+      "has_graph": 1,
+      "mean_real_slots": 21.833333333333332,
+      "n_vuln": 3
+    },
+    "libspiro": {
+      "n": 18,
+      "has_graph": 1,
+      "mean_real_slots": 9.555555555555555,
+      "n_vuln": 1
+    },
+    "cracklib": {
+      "n": 18,
+      "has_graph": 1,
+      "mean_real_slots": 8.777777777777779,
+      "n_vuln": 1
+    },
+    "gegl": {
+      "n": 18,
+      "has_graph": 1,
+      "mean_real_slots": 8.277777777777779,
+      "n_vuln": 2
+    },
+    "nettle": {
+      "n": 18,
+      "has_graph": 1,
+      "mean_real_slots": 20.444444444444443,
+      "n_vuln": 7
+    },
+    "jhead": {
+      "n": 18,
+      "has_graph": 1,
+      "mean_real_slots": 8.777777777777779,
+      "n_vuln": 1
+    },
+    "shibboleth": {
+      "n": 17,
+      "has_graph": 1,
+      "mean_real_slots": 13.470588235294118,
+      "n_vuln": 2
+    },
+    "mosquitto": {
+      "n": 17,
+      "has_graph": 1,
+      "mean_real_slots": 18.764705882352942,
+      "n_vuln": 1
+    },
+    "libu2f-host": {
+      "n": 17,
+      "has_graph": 1,
+      "mean_real_slots": 8.117647058823529,
+      "n_vuln": 1
+    },
+    "nagioscore": {
+      "n": 17,
+      "has_graph": 1,
+      "mean_real_slots": 15.647058823529411,
+      "n_vuln": 2
+    },
+    "k4dirstat": {
+      "n": 17,
+      "has_graph": 1,
+      "mean_real_slots": 6.9411764705882355,
+      "n_vuln": 0
+    },
+    "pam_p11": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 22.75,
+      "n_vuln": 1
+    },
+    "nginx": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 22.625,
+      "n_vuln": 3
+    },
+    "capnproto": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 4.25,
+      "n_vuln": 1
+    },
+    "libwebm": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 15.8125,
+      "n_vuln": 1
+    },
+    "runc": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 13.0,
+      "n_vuln": 1
+    },
+    "mosh": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 5.0,
+      "n_vuln": 1
+    },
+    "rhonabwy": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 32.0,
+      "n_vuln": 0
+    },
+    "gnome-shell": {
+      "n": 16,
+      "has_graph": 1,
+      "mean_real_slots": 7.875,
+      "n_vuln": 0
+    },
+    "feh": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 12.4,
+      "n_vuln": 1
+    },
+    "knc": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 14.6,
+      "n_vuln": 1
+    },
+    "rtl_433": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 29.533333333333335,
+      "n_vuln": 1
+    },
+    "libidn2": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 12.333333333333334,
+      "n_vuln": 3
+    },
+    "mesos": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 8.4,
+      "n_vuln": 1
+    },
+    "cronie": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 11.666666666666666,
+      "n_vuln": 1
+    },
+    "WAVM": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 11.533333333333333,
+      "n_vuln": 2
+    },
+    "varnish-modules": {
+      "n": 15,
+      "has_graph": 1,
+      "mean_real_slots": 9.666666666666666,
+      "n_vuln": 1
+    },
+    "musl": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 11.857142857142858,
+      "n_vuln": 1
+    },
+    "tinc": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 22.0,
+      "n_vuln": 1
+    },
+    "LibRaw-demosaic-pack-GPL2": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 17.5,
+      "n_vuln": 1
+    },
+    "csync2": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 22.214285714285715,
+      "n_vuln": 1
+    },
+    "folly": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 9.785714285714286,
+      "n_vuln": 1
+    },
+    "png2webp": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 13.714285714285714,
+      "n_vuln": 1
+    },
+    "jbig2dec": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 21.428571428571427,
+      "n_vuln": 1
+    },
+    "AFFLIBv3": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 14.642857142857142,
+      "n_vuln": 1
+    },
+    "retdec": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 12.071428571428571,
+      "n_vuln": 1
+    },
+    "isolated-vm": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 3.7142857142857144,
+      "n_vuln": 1
+    },
+    "doom-vanille": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 6.857142857142857,
+      "n_vuln": 1
+    },
+    "spnego-http-auth-nginx-module": {
+      "n": 14,
+      "has_graph": 1,
+      "mean_real_slots": 29.428571428571427,
+      "n_vuln": 1
+    },
+    "lxde": {
+      "n": 13,
+      "has_graph": 1,
+      "mean_real_slots": 16.384615384615383,
+      "n_vuln": 3
+    },
+    "bwa": {
+      "n": 13,
+      "has_graph": 1,
+      "mean_real_slots": 15.692307692307692,
+      "n_vuln": 1
+    },
+    "openscad": {
+      "n": 13,
+      "has_graph": 1,
+      "mean_real_slots": 12.0,
+      "n_vuln": 0
+    },
+    "colord": {
+      "n": 13,
+      "has_graph": 1,
+      "mean_real_slots": 11.384615384615385,
+      "n_vuln": 0
+    },
+    "acl": {
+      "n": 13,
+      "has_graph": 1,
+      "mean_real_slots": 14.461538461538462,
+      "n_vuln": 0
+    },
+    "nbdkit": {
+      "n": 13,
+      "has_graph": 1,
+      "mean_real_slots": 23.53846153846154,
+      "n_vuln": 2
+    },
+    "kamailio": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 15.416666666666666,
+      "n_vuln": 2
+    },
+    "unrealircd": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 6.75,
+      "n_vuln": 1
+    },
+    "exfat": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 21.083333333333332,
+      "n_vuln": 1
+    },
+    "psutil": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 19.333333333333332,
+      "n_vuln": 1
+    },
+    "thunar": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 14.916666666666666,
+      "n_vuln": 1
+    },
+    "tpm2-tools": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 7.75,
+      "n_vuln": 1
+    },
+    "libcdio": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 7.0,
+      "n_vuln": 1
+    },
+    "augeas": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 22.75,
+      "n_vuln": 0
+    },
+    "veyon": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 6.583333333333333,
+      "n_vuln": 1
+    },
+    "tk": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 28.833333333333332,
+      "n_vuln": 0
+    },
+    "tmate-ssh-server": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 11.583333333333334,
+      "n_vuln": 1
+    },
+    "shapelib": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 11.5,
+      "n_vuln": 1
+    },
+    "cortx-s3server": {
+      "n": 12,
+      "has_graph": 1,
+      "mean_real_slots": 24.416666666666668,
+      "n_vuln": 0
+    },
+    "libXvMC": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 12.909090909090908,
+      "n_vuln": 1
+    },
+    "axtls-8266": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 17.454545454545453,
+      "n_vuln": 1
+    },
+    "pam-u2f": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 24.272727272727273,
+      "n_vuln": 2
+    },
+    "snapd": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 14.909090909090908,
+      "n_vuln": 1
+    },
+    "gzip": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 20.90909090909091,
+      "n_vuln": 2
+    },
+    "libidn": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 23.363636363636363,
+      "n_vuln": 4
+    },
+    "ps-lite": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 11.454545454545455,
+      "n_vuln": 1
+    },
+    "edgeless-mariadb": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 16.0,
+      "n_vuln": 0
+    },
+    "kde1-kdebase": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 9.727272727272727,
+      "n_vuln": 0
+    },
+    "OpenDoas": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 13.272727272727273,
+      "n_vuln": 1
+    },
+    "bsdiff4": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 11.363636363636363,
+      "n_vuln": 1
+    },
+    "ompl": {
+      "n": 11,
+      "has_graph": 1,
+      "mean_real_slots": 9.909090909090908,
+      "n_vuln": 0
+    },
+    "wpitchoune": {
+      "n": 10,
+      "has_graph": 1,
+      "mean_real_slots": 17.4,
+      "n_vuln": 1
+    },
+    "monkey": {
+      "n": 10,
+      "has_graph": 1,
+      "mean_real_slots": 13.6,
+      "n_vuln": 1
+    },
+    "cbang": {
+      "n": 10,
+      "has_graph": 1,
+      "mean_real_slots": 7.1,
+      "n_vuln": 1
+    },
+    "phosphor-host-ipmid": {
+      "n": 10,
+      "has_graph": 1,
+      "mean_real_slots": 17.2,
+      "n_vuln": 1
+    },
+    "atril": {
+      "n": 10,
+      "has_graph": 1,
+      "mean_real_slots": 12.4,
+      "n_vuln": 0
+    },
+    "altlinux": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "3proxy": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "webserver": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "pycrypto": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "freeipa": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "lldpd": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "re2c": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "mpv": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "ast": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "gssproxy": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "bwm-ng": {
+      "n": 9,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libxsmm": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "postgresql": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libevt": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "pykerberos": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "wkhtmltopdf": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "Platinum": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "exo": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "tpm": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "fluent-bit": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "gilcc": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "crun": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "autotrace": {
+      "n": 8,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libbsd": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "suhosin": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "charybdis": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "engine": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "yajl-ruby": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "gthumb": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "jansson": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "html-parser": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "rufus": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "android_kernel_xiaomi_msm8996": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "xbmc": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "puma": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "Singular": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "toybox": {
+      "n": 7,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "drm": {
+      "n": 6,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "media-tree": {
+      "n": 6,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "tigervnc": {
+      "n": 6,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "bareos": {
+      "n": 6,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "libXpm": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "android-gif-drawable": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "mod_h2": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libextractor": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libofx": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "abuild": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "oocborrt": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "elfspirit": {
+      "n": 5,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libXdmcp": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "proxychains-ng": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libndp": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "detect-character-encoding": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "rawspeed": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "gsasl": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "quagga-RE": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "m4": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "htmldoc": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 2
+    },
+    "gd-libgd": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "SoftHSMv2": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "furnace": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "icecast-server": {
+      "n": 4,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libXv": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "tcpreplay": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "nefarious2": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "Openswan": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "gcab": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "opensips": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "maddy": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "iniparser": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "bzip2": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "univention-corporate-server": {
+      "n": 3,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libICE": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "yodl": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "libtomcrypt": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "e2fsprogs": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "roundcubemail": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "amanda": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "resiprocate": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "tntnet": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "ndjbdns": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "openrc": {
+      "n": 2,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "moodle": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "doas": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "ubridge": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "seatd": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "jpeg-quantsmooth": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "libseccomp": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "opus": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "gnome-screensaver": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "freetype2-demos": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "at91bootstrap": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 1
+    },
+    "ffjpeg": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    },
+    "logrotate": {
+      "n": 1,
+      "has_graph": 0,
+      "mean_real_slots": 0.0,
+      "n_vuln": 0
+    }
+  },
+  "projects_total": 754,
+  "projects_without_graph": 94
+}

@@ -1,0 +1,17 @@
+{
+  "graph_gpickle": {
+    "files": 660,
+    "mb": 219.992097
+  },
+  "entity_embeddings_pt": {
+    "files": 660,
+    "mb": 360.490028
+  },
+  "entity_to_idx_json": {
+    "files": 660,
+    "mb": 33.467283
+  },
+  "global_index_json_mb": 4.942158,
+  "total_mb": 619.099093,
+  "needed_at_inference_mb": 393.957311
+}

@@ -1,0 +1,1 @@
+{"best_threshold": 0.77, "selected_by": "val_VD-S_FNR", "epoch": 4, "val_fnr": 87.68971332209105, "val_auc": 0.81245725933363}

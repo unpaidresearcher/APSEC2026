@@ -1,0 +1,480 @@
+{
+  "fixes": [],
+  "breaks": [
+    {
+      "kind": "breaks",
+      "backbone": "qwen_lora",
+      "project": "tensorflow",
+      "cwe": [
+        "CWE-416"
+      ],
+      "cve": "",
+      "commit": "e746adbfcfee15e9cfdb391ff746c765b99bdf9b",
+      "loc": 95,
+      "changed_lines": 1,
+      "scores": {
+        "base_vuln": 0.4056,
+        "base_patched": 0.1248,
+        "thr_base": 0.3,
+        "bask_vuln": 0.2401,
+        "bask_patched": 0.252,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "correct",
+      "outcome_bask": "both_vuln",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::DecodePngV2",
+        "Variable::DecodePngV2::total_size",
+        "Variable::DecodePngV2::channel_bits",
+        "Variable::DecodePngV2::width",
+        "Variable::DecodePngV2::height",
+        "Variable::DecodePngV2::scale",
+        "Function::OP_REQUIRES",
+        "Function::device",
+        "Function::CommonInitDecode",
+        "Function::data",
+        "Function::buffer",
+        "Function::max"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "loc": [
+          95.0,
+          94.0
+        ],
+        "halstead_N1": [
+          441.0,
+          435.0
+        ],
+        "halstead_N2": [
+          487.0,
+          484.0
+        ],
+        "halstead_vol": [
+          7245.23,
+          7174.96
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -20,3 +20,2 @@",
+        "         height <= 0 || height >= (1LL << 27) || total_size >= (1LL << 29)) {",
+        "-      png::CommonFreeDecode(&decode);",
+        "       OP_REQUIRES(context, false,"
+      ],
+      "margin": -0.0119
+    }
+  ],
+  "both_fail": [
+    {
+      "kind": "both_fail",
+      "backbone": "qwen_lora",
+      "project": "linux",
+      "cwe": [
+        "CWE-834"
+      ],
+      "cve": "",
+      "commit": "775c5033a0d164622d9d10dd0f0a5531639ed3ed",
+      "loc": 4,
+      "changed_lines": 1,
+      "scores": {
+        "base_vuln": 0.0001,
+        "base_patched": 0.0001,
+        "thr_base": 0.3,
+        "bask_vuln": 0.0322,
+        "bask_patched": 0.0331,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::fuse_make_bad",
+        "Function::set_bit",
+        "Function::get_fuse_inode",
+        "Type::inode",
+        "Function::__ctl_set_bit",
+        "Function::__iwl_trans_pcie_set_bit",
+        "Function::__iwl_trans_pcie_set_bits_mask",
+        "Function::__set_bit",
+        "Function::__set_bit_le",
+        "Function::__test_and_set_bit",
+        "Function::a",
+        "Function::ath6kl_set_bitrate_mask32"
+      ],
+      "kg_only_in_vuln": [
+        "Function::__set_bit",
+        "Function::__set_bit_le",
+        "Function::__test_and_set_bit",
+        "Function::a",
+        "Function::ath6kl_set_bitrate_mask32",
+        "Function::ath6kl_set_bitrate_mask64",
+        "Function::ath6kl_wmi_set_bitrate_mask",
+        "Function::b"
+      ],
+      "kg_only_in_patched": [
+        "Function::remove_inode_hash",
+        "Function::__bfq_weights_tree_remove",
+        "Function::__bnx2x_remove",
+        "Function::__debugfs_remove",
+        "Function::__dev_remove_offload",
+        "Function::__dev_remove_pack",
+        "Function::__dmar_remove_one_dev_info",
+        "Function::__gvt_cache_remove_entry"
+      ],
+      "features_changed": {
+        "loc": [
+          4.0,
+          5.0
+        ],
+        "halstead_n2": [
+          10.0,
+          11.0
+        ],
+        "halstead_N1": [
+          13.0,
+          16.0
+        ],
+        "halstead_N2": [
+          12.0,
+          14.0
+        ],
+        "halstead_vol": [
+          106.2,
+          129.66
+        ],
+        "fan_out": [
+          3.0,
+          4.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -2,2 +2,3 @@",
+        " {",
+        "+\tremove_inode_hash(inode);",
+        " \tset_bit(FUSE_I_BAD, &get_fuse_inode(inode)->state);"
+      ],
+      "margin": -0.0009
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "qwen_lora",
+      "project": "tensorflow",
+      "cwe": [
+        "CWE-125"
+      ],
+      "cve": "",
+      "commit": "701cfaca222a82afbeeb17496bd718baa65a67d2",
+      "loc": 8,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0061,
+        "base_patched": 0.011,
+        "thr_base": 0.3,
+        "bask_vuln": 0.0625,
+        "bask_patched": 0.0679,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 8,
+      "kg_slots_patched": 10,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::SparseCountSparseOutputShapeFn",
+        "Function::input",
+        "Function::OK",
+        "Function::Vector",
+        "Function::Matrix",
+        "Function::UnknownDim",
+        "Function::Dim",
+        "Function::set_output"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [
+        "Function::TF_RETURN_IF_ERROR",
+        "Function::WithRank"
+      ],
+      "features_changed": {
+        "loc": [
+          8.0,
+          10.0
+        ],
+        "n_derefs": [
+          9.0,
+          11.0
+        ],
+        "halstead_n1": [
+          11.0,
+          12.0
+        ],
+        "halstead_n2": [
+          22.0,
+          26.0
+        ],
+        "halstead_N1": [
+          55.0,
+          68.0
+        ],
+        "halstead_N2": [
+          44.0,
+          54.0
+        ],
+        "halstead_vol": [
+          499.4,
+          640.25
+        ],
+        "fan_out": [
+          8.0,
+          10.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -1,2 +1,4 @@",
+        " Status SparseCountSparseOutputShapeFn(InferenceContext *c) {",
+        "+  ShapeHandle unused;",
+        "+  TF_RETURN_IF_ERROR(c->WithRank(c->input(0), 2, &unused));",
+        "   auto rank = c->Dim(c->input(0), 1);"
+      ],
+      "margin": -0.0054
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "qwen_lora",
+      "project": "qemu",
+      "cwe": [
+        "CWE-835"
+      ],
+      "cve": "",
+      "commit": "1caff0340f49c93d535c6558a5138d20d475315c",
+      "loc": 14,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0095,
+        "base_patched": 0.0425,
+        "thr_base": 0.3,
+        "bask_vuln": 0.0498,
+        "bask_patched": 0.0507,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 32,
+      "kg_slots_patched": 32,
+      "kg_same_entities": false,
+      "kg_entities_vuln": [
+        "Function::e1000_send_packet",
+        "Variable::e1000_send_packet::PTCregs",
+        "Variable::e1000_send_packet::buf",
+        "Function::receive",
+        "Function::qemu_send_packet",
+        "Function::inc_tx_bcast_or_mcast_count",
+        "Function::qemu_get_queue",
+        "Function::e1000x_increase_size_stats",
+        "Type::uint8_t",
+        "Function::a",
+        "Function::at",
+        "Function::can_receive"
+      ],
+      "kg_only_in_vuln": [
+        "Function::receive",
+        "Function::can_receive",
+        "Function::dp8393x_can_receive",
+        "Function::dp8393x_do_receiver_disable",
+        "Function::dp8393x_do_receiver_enable",
+        "Function::dp8393x_receive",
+        "Function::dp8393x_receive_filter"
+      ],
+      "kg_only_in_patched": [
+        "Function::qemu_receive_packet",
+        "Function::e1000_mit_timer",
+        "Function::e1000_mmio_read",
+        "Function::e1000_mmio_setup",
+        "Function::e1000_mmio_write",
+        "Function::e1000_post_load",
+        "Function::e1000_pre_save"
+      ],
+      "features_changed": {
+        "n_derefs": [
+          5.0,
+          3.0
+        ],
+        "halstead_n2": [
+          32.0,
+          31.0
+        ],
+        "halstead_N1": [
+          57.0,
+          55.0
+        ],
+        "halstead_N2": [
+          48.0,
+          46.0
+        ],
+        "halstead_vol": [
+          573.24,
+          548.05
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -7,3 +7,3 @@",
+        "     if (s->phy_reg[PHY_CTRL] & MII_CR_LOOPBACK) {",
+        "-        nc->info->receive(nc, buf, size);",
+        "+        qemu_receive_packet(nc, buf, size);",
+        "     } else {"
+      ],
+      "margin": -0.0009
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "qwen_lora",
+      "project": "vim",
+      "cwe": [
+        "CWE-476"
+      ],
+      "cve": "",
+      "commit": "8e4b76da1d7e987d43ca960dfbc372d1c617466f",
+      "loc": 26,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.1675,
+        "base_patched": 0.1925,
+        "thr_base": 0.3,
+        "bask_vuln": 0.0817,
+        "bask_patched": 0.0879,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 4,
+      "kg_slots_patched": 4,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::fname_match",
+        "Function::vim_regexec",
+        "Function::vim_free",
+        "Function::home_replace_save"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "cyclomatic": [
+          5.0,
+          6.0
+        ],
+        "n_derefs": [
+          1.0,
+          2.0
+        ],
+        "n_null_check": [
+          2.0,
+          3.0
+        ],
+        "halstead_n2": [
+          41.0,
+          42.0
+        ],
+        "halstead_N1": [
+          65.0,
+          69.0
+        ],
+        "halstead_N2": [
+          70.0,
+          74.0
+        ],
+        "halstead_vol": [
+          780.48,
+          830.45
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -14,3 +14,3 @@",
+        " \t    match = name;",
+        "-\telse",
+        "+\telse if (rmp->regprog != NULL)",
+        " \t{"
+      ],
+      "margin": -0.0062
+    },
+    {
+      "kind": "both_fail",
+      "backbone": "qwen_lora",
+      "project": "nagioscore",
+      "cwe": [
+        "CWE-476"
+      ],
+      "cve": "",
+      "commit": "b1a92a3b52d292ccb601e77a0b29cb1e67ac9d76",
+      "loc": 33,
+      "changed_lines": 2,
+      "scores": {
+        "base_vuln": 0.0,
+        "base_patched": 0.0,
+        "thr_base": 0.3,
+        "bask_vuln": 0.0429,
+        "bask_patched": 0.0417,
+        "thr_bask": 0.23
+      },
+      "outcome_base": "both_benign",
+      "outcome_bask": "both_benign",
+      "kg_slots_vuln": 16,
+      "kg_slots_patched": 16,
+      "kg_same_entities": true,
+      "kg_entities_vuln": [
+        "Function::qh_help",
+        "Variable::qh_help::sd",
+        "Variable::qh_help::buf",
+        "Function::nsock_printf_nul",
+        "Function::handler",
+        "Function::qh_find_handler",
+        "Function::nsock_printf",
+        "GLOBAL::ExternalAPI::strcmp",
+        "Type::query_handler",
+        "Function::nsock_strerror",
+        "Function::nsock_unix",
+        "Function::p"
+      ],
+      "kg_only_in_vuln": [],
+      "kg_only_in_patched": [],
+      "features_changed": {
+        "n_null_check": [
+          2.0,
+          3.0
+        ],
+        "halstead_N1": [
+          103.0,
+          102.0
+        ],
+        "halstead_N2": [
+          106.0,
+          107.0
+        ]
+      },
+      "diff": [
+        "--- vulnerable",
+        "+++ patched",
+        "@@ -4,3 +4,3 @@",
+        " ",
+        "-\tif (!*buf || !strcmp(buf, \"help\")) {",
+        "+\tif (buf == NULL || !strcmp(buf, \"help\")) {",
+        " \t\tnsock_printf_nul(sd,"
+      ],
+      "margin": 0.0012
+    }
+  ]
+}

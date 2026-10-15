@@ -1,0 +1,871 @@
+{
+  "bucket_definition": "number of real (non-[PAD]) KG slots out of 32",
+  "pair_rule": "a vulnerable/patched pair is assigned to the bucket of its vulnerable function",
+  "vds_global_rule": "FNR inside the bucket at the threshold where FPR=0.5% on the whole test set",
+  "configs": {
+    "codebert_full_base": {
+      "threshold": 0.05,
+      "global_0.5pct_fpr_threshold": 0.16840453445911407,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8507246376811595,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.36363636363636365,
+          "P-C": 25.0
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.7622340145716616,
+          "VD-S_FNR_within_bucket": 93.47826086956522,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.0759493670886076,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7377919791712895,
+          "VD-S_FNR_within_bucket": 90.47619047619048,
+          "FNR_at_global_0.5pct_FPR": 90.47619047619048,
+          "F1": 0.10650887573964497,
+          "P-C": 7.407407407407407
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7402377422720035,
+          "VD-S_FNR_within_bucket": 96.15384615384616,
+          "FNR_at_global_0.5pct_FPR": 96.15384615384616,
+          "F1": 0.17959183673469387,
+          "P-C": 20.895522388059703
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.8004499793578462,
+          "VD-S_FNR_within_bucket": 92.61363636363636,
+          "FNR_at_global_0.5pct_FPR": 88.35227272727273,
+          "F1": 0.23240589198036007,
+          "P-C": 22.40802675585284
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.8254237288135594,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.36363636363636365,
+          "P-C": 25.0
+        }
+      }
+    },
+    "codebert_full_bridge": {
+      "threshold": 0.77,
+      "global_0.5pct_fpr_threshold": 0.9121832847595215,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8101449275362318,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.23529411764705882,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.7848268848032125,
+          "VD-S_FNR_within_bucket": 86.95652173913044,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.06896551724137931,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7560466870811698,
+          "VD-S_FNR_within_bucket": 90.47619047619048,
+          "FNR_at_global_0.5pct_FPR": 90.47619047619048,
+          "F1": 0.1111111111111111,
+          "P-C": 5.555555555555555
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7032065008510404,
+          "VD-S_FNR_within_bucket": 92.3076923076923,
+          "FNR_at_global_0.5pct_FPR": 89.74358974358975,
+          "F1": 0.2,
+          "P-C": 16.417910447761194
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.7873751998892118,
+          "VD-S_FNR_within_bucket": 92.32954545454545,
+          "FNR_at_global_0.5pct_FPR": 87.5,
+          "F1": 0.25064599483204136,
+          "P-C": 17.725752508361204
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.7779661016949153,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.23529411764705882,
+          "P-C": 12.5
+        }
+      }
+    },
+    "deepseek_lora_base": {
+      "threshold": 0.02,
+      "global_0.5pct_fpr_threshold": 0.7893449664115906,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8014492753623188,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.3,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.7023253724015185,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.0,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7555363245018417,
+          "VD-S_FNR_within_bucket": 93.65079365079364,
+          "FNR_at_global_0.5pct_FPR": 93.65079365079364,
+          "F1": 0.1111111111111111,
+          "P-C": 7.407407407407407
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7656618898588919,
+          "VD-S_FNR_within_bucket": 98.71794871794873,
+          "FNR_at_global_0.5pct_FPR": 96.15384615384616,
+          "F1": 0.13658536585365855,
+          "P-C": 17.91044776119403
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.7912341721712409,
+          "VD-S_FNR_within_bucket": 92.89772727272727,
+          "FNR_at_global_0.5pct_FPR": 88.63636363636364,
+          "F1": 0.23461538461538461,
+          "P-C": 22.40802675585284
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.7677966101694915,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.3,
+          "P-C": 12.5
+        }
+      }
+    },
+    "deepseek_lora_bridge": {
+      "threshold": 0.03,
+      "global_0.5pct_fpr_threshold": 0.8264324069023132,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8318840579710145,
+          "VD-S_FNR_within_bucket": 90.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.375,
+          "P-C": 37.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.6883773025767818,
+          "VD-S_FNR_within_bucket": 95.65217391304348,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.027777777777777776,
+          "P-C": 2.4390243902439024
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7597449666415184,
+          "VD-S_FNR_within_bucket": 90.47619047619048,
+          "FNR_at_global_0.5pct_FPR": 96.82539682539682,
+          "F1": 0.19696969696969696,
+          "P-C": 20.37037037037037
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7487865810135618,
+          "VD-S_FNR_within_bucket": 94.87179487179486,
+          "FNR_at_global_0.5pct_FPR": 94.87179487179486,
+          "F1": 0.12195121951219512,
+          "P-C": 10.447761194029852
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.7763079678714021,
+          "VD-S_FNR_within_bucket": 91.19318181818181,
+          "FNR_at_global_0.5pct_FPR": 88.63636363636364,
+          "F1": 0.23272727272727273,
+          "P-C": 18.39464882943144
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.8033898305084746,
+          "VD-S_FNR_within_bucket": 90.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.375,
+          "P-C": 37.5
+        }
+      }
+    },
+    "qwen_lora_base": {
+      "threshold": 0.3,
+      "global_0.5pct_fpr_threshold": 0.6351373195648193,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8289855072463768,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.3157894736842105,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.7257840378056586,
+          "VD-S_FNR_within_bucket": 93.47826086956522,
+          "FNR_at_global_0.5pct_FPR": 97.82608695652173,
+          "F1": 0.02857142857142857,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7478660926936789,
+          "VD-S_FNR_within_bucket": 96.82539682539682,
+          "FNR_at_global_0.5pct_FPR": 98.4126984126984,
+          "F1": 0.07407407407407407,
+          "P-C": 3.7037037037037037
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7643386591994729,
+          "VD-S_FNR_within_bucket": 91.02564102564102,
+          "FNR_at_global_0.5pct_FPR": 91.02564102564102,
+          "F1": 0.2,
+          "P-C": 19.402985074626866
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.8002339226363426,
+          "VD-S_FNR_within_bucket": 91.76136363636364,
+          "FNR_at_global_0.5pct_FPR": 87.5,
+          "F1": 0.2773333333333333,
+          "P-C": 18.39464882943144
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.8033898305084746,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.3157894736842105,
+          "P-C": 12.5
+        }
+      }
+    },
+    "qwen_lora_bridge": {
+      "threshold": 0.23,
+      "global_0.5pct_fpr_threshold": 0.3839694559574127,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8101449275362319,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.3333333333333333,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.8060574975670061,
+          "VD-S_FNR_within_bucket": 84.78260869565217,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.10526315789473684,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7658495934358003,
+          "VD-S_FNR_within_bucket": 92.06349206349206,
+          "FNR_at_global_0.5pct_FPR": 95.23809523809523,
+          "F1": 0.13725490196078433,
+          "P-C": 7.407407407407407
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7465244605501564,
+          "VD-S_FNR_within_bucket": 92.3076923076923,
+          "FNR_at_global_0.5pct_FPR": 93.58974358974359,
+          "F1": 0.19444444444444445,
+          "P-C": 13.432835820895523
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.8107470500010452,
+          "VD-S_FNR_within_bucket": 91.47727272727273,
+          "FNR_at_global_0.5pct_FPR": 86.93181818181817,
+          "F1": 0.2623655913978495,
+          "P-C": 19.06354515050167
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.7915254237288135,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.3333333333333333,
+          "P-C": 12.5
+        }
+      }
+    },
+    "starcoder2_lora_base": {
+      "threshold": 0.55,
+      "global_0.5pct_fpr_threshold": 0.9031767249107361,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.7768115942028986,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.23529411764705882,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.6552809121754911,
+          "VD-S_FNR_within_bucket": 89.13043478260869,
+          "FNR_at_global_0.5pct_FPR": 95.65217391304348,
+          "F1": 0.06060606060606061,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.6638017327672501,
+          "VD-S_FNR_within_bucket": 93.65079365079364,
+          "FNR_at_global_0.5pct_FPR": 93.65079365079364,
+          "F1": 0.11009174311926606,
+          "P-C": 3.7037037037037037
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.6743342667325536,
+          "VD-S_FNR_within_bucket": 97.43589743589743,
+          "FNR_at_global_0.5pct_FPR": 93.58974358974359,
+          "F1": 0.1610738255033557,
+          "P-C": 14.925373134328359
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.760660594650808,
+          "VD-S_FNR_within_bucket": 92.61363636363636,
+          "FNR_at_global_0.5pct_FPR": 87.7840909090909,
+          "F1": 0.2566137566137566,
+          "P-C": 17.391304347826086
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.7576271186440678,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.23529411764705882,
+          "P-C": 12.5
+        }
+      }
+    },
+    "starcoder2_lora_bridge": {
+      "threshold": 0.23,
+      "global_0.5pct_fpr_threshold": 0.5420539379119873,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.855072463768116,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.45454545454545453,
+          "P-C": 25.0
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.7148421403333421,
+          "VD-S_FNR_within_bucket": 91.30434782608697,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.08823529411764706,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7650359719325236,
+          "VD-S_FNR_within_bucket": 90.47619047619048,
+          "FNR_at_global_0.5pct_FPR": 93.65079365079364,
+          "F1": 0.16129032258064516,
+          "P-C": 9.25925925925926
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.774968429144018,
+          "VD-S_FNR_within_bucket": 93.58974358974359,
+          "FNR_at_global_0.5pct_FPR": 93.58974358974359,
+          "F1": 0.2573099415204678,
+          "P-C": 19.402985074626866
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.8006038156629528,
+          "VD-S_FNR_within_bucket": 92.04545454545455,
+          "FNR_at_global_0.5pct_FPR": 86.07954545454545,
+          "F1": 0.24536082474226803,
+          "P-C": 19.06354515050167
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.8305084745762712,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.45454545454545453,
+          "P-C": 25.0
+        }
+      }
+    },
+    "starcoder_lora_base": {
+      "threshold": 0.05,
+      "global_0.5pct_fpr_threshold": 0.06647007167339325,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8521739130434782,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.47619047619047616,
+          "P-C": 37.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.7483484135125419,
+          "VD-S_FNR_within_bucket": 93.47826086956522,
+          "FNR_at_global_0.5pct_FPR": 95.65217391304348,
+          "F1": 0.09302325581395349,
+          "P-C": 2.4390243902439024
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.6973032145445938,
+          "VD-S_FNR_within_bucket": 93.65079365079364,
+          "FNR_at_global_0.5pct_FPR": 93.65079365079364,
+          "F1": 0.12987012987012986,
+          "P-C": 9.25925925925926
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7143112062812277,
+          "VD-S_FNR_within_bucket": 96.15384615384616,
+          "FNR_at_global_0.5pct_FPR": 96.15384615384616,
+          "F1": 0.14035087719298245,
+          "P-C": 10.447761194029852
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.7890337577604046,
+          "VD-S_FNR_within_bucket": 95.73863636363636,
+          "FNR_at_global_0.5pct_FPR": 90.625,
+          "F1": 0.20623501199040767,
+          "P-C": 12.37458193979933
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.8271186440677966,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.47619047619047616,
+          "P-C": 37.5
+        }
+      }
+    },
+    "starcoder_lora_bridge": {
+      "threshold": 0.12,
+      "global_0.5pct_fpr_threshold": 0.38062652945518494,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.7666666666666667,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.21052631578947367,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.752945895473316,
+          "VD-S_FNR_within_bucket": 93.47826086956522,
+          "FNR_at_global_0.5pct_FPR": 97.82608695652173,
+          "F1": 0.0967741935483871,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7001533553257692,
+          "VD-S_FNR_within_bucket": 98.41269841269842,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.0967741935483871,
+          "P-C": 7.407407407407407
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7460385438972162,
+          "VD-S_FNR_within_bucket": 92.3076923076923,
+          "FNR_at_global_0.5pct_FPR": 91.02564102564102,
+          "F1": 0.1935483870967742,
+          "P-C": 13.432835820895523
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.7692388467045717,
+          "VD-S_FNR_within_bucket": 93.75,
+          "FNR_at_global_0.5pct_FPR": 85.79545454545455,
+          "F1": 0.26004728132387706,
+          "P-C": 19.06354515050167
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.7322033898305085,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 90.0,
+          "F1": 0.21052631578947367,
+          "P-C": 12.5
+        }
+      }
+    },
+    "unixcoder_full_base": {
+      "threshold": 0.04,
+      "global_0.5pct_fpr_threshold": 0.7702127695083618,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8434782608695652,
+          "VD-S_FNR_within_bucket": 90.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.35294117647058826,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.6629941608143297,
+          "VD-S_FNR_within_bucket": 93.47826086956522,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.06741573033707865,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.6687919446540136,
+          "VD-S_FNR_within_bucket": 92.06349206349206,
+          "FNR_at_global_0.5pct_FPR": 92.06349206349206,
+          "F1": 0.14666666666666667,
+          "P-C": 9.25925925925926
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.6820155932575633,
+          "VD-S_FNR_within_bucket": 94.87179487179486,
+          "FNR_at_global_0.5pct_FPR": 92.3076923076923,
+          "F1": 0.14285714285714285,
+          "P-C": 14.925373134328359
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.7451822453960157,
+          "VD-S_FNR_within_bucket": 88.92045454545455,
+          "FNR_at_global_0.5pct_FPR": 87.2159090909091,
+          "F1": 0.2490566037735849,
+          "P-C": 15.719063545150501
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.8271186440677967,
+          "VD-S_FNR_within_bucket": 90.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.35294117647058826,
+          "P-C": 12.5
+        }
+      }
+    },
+    "unixcoder_full_bridge": {
+      "threshold": 0.12,
+      "global_0.5pct_fpr_threshold": 0.6366313099861145,
+      "buckets": {
+        "0": {
+          "n": 79,
+          "n_vuln": 10,
+          "n_benign": 69,
+          "n_pairs": 8,
+          "AUC": 0.8456521739130436,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.26666666666666666,
+          "P-C": 12.5
+        },
+        "1-7": {
+          "n": 9964,
+          "n_vuln": 46,
+          "n_benign": 9918,
+          "n_pairs": 41,
+          "AUC": 0.69945728889941,
+          "VD-S_FNR_within_bucket": 91.30434782608697,
+          "FNR_at_global_0.5pct_FPR": 97.82608695652173,
+          "F1": 0.09090909090909091,
+          "P-C": 0.0
+        },
+        "8-15": {
+          "n": 3282,
+          "n_vuln": 63,
+          "n_benign": 3219,
+          "n_pairs": 54,
+          "AUC": 0.7021257710912884,
+          "VD-S_FNR_within_bucket": 88.88888888888889,
+          "FNR_at_global_0.5pct_FPR": 88.88888888888889,
+          "F1": 0.1592920353982301,
+          "P-C": 5.555555555555555
+        },
+        "16-31": {
+          "n": 2413,
+          "n_vuln": 78,
+          "n_benign": 2335,
+          "n_pairs": 67,
+          "AUC": 0.7174051501674628,
+          "VD-S_FNR_within_bucket": 96.15384615384616,
+          "FNR_at_global_0.5pct_FPR": 93.58974358974359,
+          "F1": 0.15894039735099338,
+          "P-C": 14.925373134328359
+        },
+        "32": {
+          "n": 9050,
+          "n_vuln": 352,
+          "n_benign": 8698,
+          "n_pairs": 299,
+          "AUC": 0.75322745955183,
+          "VD-S_FNR_within_bucket": 88.92045454545455,
+          "FNR_at_global_0.5pct_FPR": 85.51136363636364,
+          "F1": 0.25280898876404495,
+          "P-C": 14.381270903010034
+        },
+        "no_project_graph": {
+          "n": 69,
+          "n_vuln": 10,
+          "n_benign": 59,
+          "n_pairs": 8,
+          "AUC": 0.8245762711864407,
+          "VD-S_FNR_within_bucket": 100.0,
+          "FNR_at_global_0.5pct_FPR": 100.0,
+          "F1": 0.26666666666666666,
+          "P-C": 12.5
+        }
+      }
+    }
+  }
+}
